@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://heartfelt-peony-0088af.netlify.app/sitemap.xml

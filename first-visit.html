@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>はじめての方へ｜今西健はり・灸院｜大阪府八尾市</title>
+  <meta name="google-site-verification" content="mKSUuKc_ZhmRhceymC6e1TPnpfpCsWZmOBBdV5jCCNk" />
+  <meta name="description" content="今西健はり・灸院の思い。痛いところだけを見るのではなく、その方がどのような毎日を送り、どのような思いで来てくださったのかまで大切にしています。八尾市堤町の鍼灸院。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://heartfelt-peony-0088af.netlify.app/first-visit.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --main: #3d6b4f;
+      --sub: #7aab8a;
+      --light: #f0f7f2;
+      --accent: #c8a96e;
+      --text: #333;
+      --muted: #555;
+      --white: #fff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      color: var(--text);
+      line-height: 2;
+      font-size: 16px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid #e0ece4;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .site-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--main);
+      white-space: nowrap;
+      letter-spacing: 0.06em;
+    }
+
+    .header-tel {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--main);
+      white-space: nowrap;
+    }
+
+    .hero-sub {
+      background: linear-gradient(135deg, #2e5440 0%, #3d6b4f 40%, #4a7a5c 100%);
+      padding: 60px 24px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .hero-sub h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .hero-sub p {
+      font-size: 0.92rem;
+      opacity: 0.85;
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 40px;
+    }
+
+    /* 冒頭の声 */
+    .voices {
+      background: var(--light);
+      border-radius: 12px;
+      padding: 28px 28px 20px;
+      margin-bottom: 40px;
+    }
+
+    .voices p {
+      color: var(--main);
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+    }
+
+    .voices p::before {
+      content: '\201C';
+      font-size: 1.2em;
+      color: var(--accent);
+      margin-right: 4px;
+    }
+
+    .voices .lead {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 16px;
+      padding-left: 0;
+      text-indent: 0;
+    }
+
+    .voices .lead::before { content: none; }
+
+    /* 本文 */
+    .body-text {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    /* 恩師の言葉 */
+    .quote-box {
+      background: var(--white);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      margin: 32px 0;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .quote-box p {
+      font-family: 'Noto Serif JP', serif;
+      color: var(--main);
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .quote-box .source {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      color: var(--main);
+      font-size: 1.15rem;
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ddeee4;
+      letter-spacing: 0.04em;
+    }
+
+    /* 小さな変化の列挙 */
+    .small-changes {
+      margin: 24px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .small-changes li {
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 6px 0 6px 24px;
+      position: relative;
+    }
+
+    .small-changes li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 10px;
+      height: 10px;
+      background: var(--sub);
+      border-radius: 50%;
+    }
+
+    /* 締めのメッセージ */
+    .closing-message {
+      background: var(--main);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 36px 32px;
+      margin: 48px 0 32px;
+      text-align: center;
+    }
+
+    .closing-message p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+
+    .closing-message .highlight {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      opacity: 1;
+      margin: 20px 0;
+      line-height: 1.8;
+    }
+
+    /* CTA */
+    .cta-area {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--main);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin: 6px 8px;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .cta-btn:hover { background: #2e5440; transform: translateY(-1px); }
+
+    .cta-btn.outline {
+      background: transparent;
+      border: 2px solid var(--main);
+      color: var(--main);
+    }
+
+    .cta-btn.outline:hover { background: var(--main); color: var(--white); }
+
+    /* 区切り線 */
+    .separator {
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      margin: 40px auto;
+    }
+
+    footer {
+      background: #1e3a28;
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.7); }
+
+    @media (max-width: 720px) {
+      .content { padding: 40px 18px 32px; }
+      .voices { padding: 22px 20px 16px; }
+      .closing-message { padding: 28px 20px; }
+      .cta-btn { display: block; margin: 10px auto; max-width: 280px; }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="site-title">今西健はり・灸院</a>
+  <div class="header-tel"><a href="tel:0729987474" style="color:var(--main);">072-998-7474</a></div>
+</header>
+
+<div class="hero-sub">
+  <h1>はじめての方へ</h1>
+  <p>今西健はり・灸院の思い</p>
+</div>
+
+<div class="content">
+
+  <!-- 冒頭の声 -->
+  <div class="voices">
+    <p>もう何年も、この痛みと付き合っている</p>
+    <p>病院で検査をしても異常なしと言われた。でも、しんどさがある</p>
+    <p>治療を受けたいけれど、自分のような状態でも行っていいのかな</p>
+    <p>できるだけ家族に迷惑をかけず、自分らしく過ごしたい</p>
+    <p class="lead">そのような思いを抱えながら、毎日を懸命に過ごしておられる方に、ぜひ読んでいただきたいと思っています。</p>
+  </div>
+
+  <!-- 恩師の教え -->
+  <p class="body-text">私は鍼灸を、真言宗の僧侶でもある恩師から学びました。<br>その恩師から何度も教わった言葉があります。</p>
+
+  <div class="quote-box">
+    <p>「肩こり一つでも、目の前にいる方を大切な家族と思いなさい」</p>
+    <p class="source">── 恩師の言葉。今の私の治療の原点です。</p>
+  </div>
+
+  <p class="body-text">私は、痛いところやつらい症状だけを見るのではなく、その方がどのような毎日を送り、どのような思いでここへ来てくださったのかまで、大切にしたいと考えています。</p>
+  <p class="body-text">少しでも楽になってほしい。少しでも安心して帰っていただきたい。その思いを大切にしながら、日々患者さんと向き合っています。</p>
+
+  <div class="separator"></div>
+
+  <!-- 娘さんのこと -->
+  <h2 class="section-heading">この気持ちを深く育ててくれた経験</h2>
+
+  <p class="body-text">娘の優維は、生まれつき心臓に重い病気がありました。術後ICUで意識のない娘のそばで、私は恩師の教えを胸に、刺さない鍼を用いて毎日手を当て続けました。</p>
+  <p class="body-text">それは治療家として何かをしたいという思いだけではなく、一人の父親として、わが子の生命力を信じ、祈るような気持ちで寄り添っていた時間でもありました。</p>
+
+  <p class="body-text">また、父は腎臓がん、肝臓がん、肺がん、リンパ節転移もある厳しい状態でした。腹水や足のむくみが強く、とてもつらい時期にも治療を続ける中で、少し循環が良くなったり、少し身体が楽になったりする変化を目の前で感じてきました。そして父は、長く苦しみ続けることなく、穏やかに旅立っていきました。</p>
+
+  <p class="body-text">もちろん、鍼灸ですべてを治せるとは考えていません。命そのものを思い通りにできるとも思っていません。</p>
+  <p class="body-text">けれど私は、どのような状態であっても、その方の身体にとって少しでも良い方向へ働きかけることはできると信じています。</p>
+
+  <!-- 小さな変化 -->
+  <ul class="small-changes">
+    <li>痛みが少しやわらぐこと</li>
+    <li>呼吸が少ししやすくなること</li>
+    <li>身体の巡りが少し良くなること</li>
+    <li>眠りやすくなること</li>
+    <li>不安で張りつめた心と身体が、少しゆるむこと</li>
+  </ul>
+
+  <p class="body-text">こうした変化は小さく見えるかもしれません。ですが、ご本人にとっては、その小さな変化が日々を支える大きな力になることがあります。</p>
+
+  <p class="body-text">患者さんから、「できるだけ周りに迷惑をかけずに過ごしたい」「できれば寝込む時間を短くしたい」というお気持ちを伺うことも少なくありません。</p>
+
+  <p class="body-text">人の最期を思い通りにすることはできません。ですが、日々の治療によって少しでも良い状態を保ち、ご本人らしく過ごせる時間を支えていくことは目指せると感じています。私は、鍼灸には「治す」だけではなく、その方がその方らしく過ごせる時間を支える力もあると思っています。</p>
+
+  <div class="separator"></div>
+
+  <!-- 背景・スキル -->
+  <h2 class="section-heading">治療に活かしている学びと経験</h2>
+
+  <p class="body-text">また私は、大東流合気柔術を学ぶ中で、身体への触れ方や、こちらの心の在り方の大切さも学びました。強く押すことよりも、相手の身体の声を静かに感じ取ること。言葉にならない小さな変化に気づくこと。そうした感覚は、今の鍼灸にも深くつながっています。</p>
+
+  <p class="body-text">もともとはプログラマーとして働いていたこともあり、私は物事を論理的に考えることも大切にしています。そのうえで、鍼灸師、柔道整復師として長年身体に触れてきた経験、運動指導や栄養の知識も活かしながら、その方に今、本当に必要なことは何かを丁寧に考えるようにしています。</p>
+
+  <p class="body-text">ただ、どれだけ知識や技術があっても、最後にいちばん大切なのは、目の前の方を大切に思う気持ちだと私は思っています。</p>
+
+  <div class="separator"></div>
+
+  <!-- 初診について -->
+  <h2 class="section-heading">初診でお伝えしたいこと</h2>
+
+  <p class="body-text">今西健はり・灸院では、症状だけを追うのではなく、その方のお身体の状態、日々の生活、これまで頑張ってこられた背景まで含めて、丁寧にお話を伺うことを大切にしています。</p>
+
+  <p class="body-text">初診では約90分お時間をいただいています。それは、単に「どこが痛いか」を確認するためだけではありません。なぜその不調が続いているのか。日々の生活の中にどのような負担があるのか。これからどうなっていきたいのか。そうしたことを一緒に整理し、その方に合った治療の方向性を考えるための時間です。</p>
+
+  <p class="body-text">「こんなことを話してもいいのかな」と思うようなことでも、どうぞ遠慮なくお話しください。</p>
+
+  <div class="separator"></div>
+
+  <!-- こんな方へ -->
+  <h2 class="section-heading">このような方にこそ、ご相談いただきたい</h2>
+
+  <ul class="small-changes">
+    <li>長年の痛みや不調と付き合ってこられた方</li>
+    <li>病院では異常なしと言われたけれど、つらさが続いている方</li>
+    <li>疲れが取れない、眠れない、何となく身体がだるい方</li>
+    <li>治療中や治療後で、主治医の先生の方針を大切にしながら身体のケアをしたい方</li>
+    <li>自分のような状態でも行っていいのかな、と迷っておられる方</li>
+  </ul>
+
+  <!-- 締め -->
+  <div class="closing-message">
+    <p>大きく変えることだけが治療ではありません。</p>
+    <p>少し楽になること。少し動きやすくなること。<br>少し眠りやすくなること。少し安心できること。</p>
+    <p class="highlight">その積み重ねが、身体を支え、毎日を支え、<br>人生を支える力になると信じています。</p>
+    <p>目の前の一人ひとりを大切に。<br>その方の生命力を信じて、誠実に向き合うこと。<br>それが、今西健はり・灸院の変わらない思いです。</p>
+  </div>
+
+  <p class="body-text" style="text-align:center;">「このままでいいのかな」「どこに相談したらいいのだろう」<br>そのように感じておられる方は、どうぞ一度ご相談ください。<br>今より少しでも良い方向へ向かうお手伝いができれば幸いです。</p>
+
+  <div class="cta-area">
+    <a href="index.html#contact" class="cta-btn">お問い合わせ・予約</a>
+    <a href="index.html" class="cta-btn outline">トップページに戻る</a>
+  </div>
+
+</div>
+
+<footer>
+  <p style="color:rgba(255,255,255,0.9); font-weight:700; margin-bottom:8px;">今西健はり・灸院</p>
+  <p>〒 大阪府八尾市堤町2-30-59　TEL: 072-998-7474　LINE ID: takeshityan　<a href="https://note.com/takeshityan" target="_blank" rel="noopener">note</a></p>
+  <p style="margin-top: 16px;">&copy; 今西健はり・灸院. All rights reserved.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.voices, .quote-box, .section-heading, .small-changes, .closing-message').forEach(el => {
+  el.classList.add('fade-up');
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

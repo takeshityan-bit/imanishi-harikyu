@@ -23,13 +23,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --main: #3d6b4f;
+      --main: #1C3028;
       --sub: #7aab8a;
       --light: #f0f7f2;
-      --accent: #c8a96e;
+      --accent: #C8963E;
       --text: #333;
       --muted: #666;
       --white: #fff;
+      --bg: #F5F1EC;
     }
 
     html { scroll-behavior: smooth; }
@@ -39,10 +40,12 @@
       color: var(--text);
       line-height: 1.9;
       font-size: 16px;
+      background: var(--bg);
     }
 
     a { color: inherit; text-decoration: none; }
 
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -58,7 +61,7 @@
 
     .site-title {
       font-family: 'Noto Serif JP', serif;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--main);
       white-space: nowrap;
@@ -72,128 +75,364 @@
       white-space: nowrap;
     }
 
-    .hero-sub {
-      background: linear-gradient(135deg, #2e5440 0%, #3d6b4f 40%, #4a7a5c 100%);
-      padding: 56px 24px;
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1C3028 0%, #2e5440 60%, #3d6b4f 100%);
+      padding: 72px 24px 56px;
       text-align: center;
       color: var(--white);
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-sub h1 {
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(200,150,62,0.15) 0%, transparent 60%);
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(200,150,62,0.5);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
       font-family: 'Noto Serif JP', serif;
-      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-      letter-spacing: 0.06em;
-      margin-bottom: 8px;
-    }
-
-    .hero-sub p {
-      font-size: 0.9rem;
-      opacity: 0.85;
-    }
-
-    .content {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 56px 24px;
-    }
-
-    .content .intro {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 40px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid #e8f0eb;
-    }
-
-    .merit-section {
-      margin-bottom: 48px;
-    }
-
-    .merit-section h2 {
-      font-family: 'Noto Serif JP', serif;
-      color: var(--main);
-      font-size: 1.25rem;
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      letter-spacing: 0.04em;
+      line-height: 1.5;
       margin-bottom: 16px;
-      padding-left: 16px;
-      border-left: 4px solid var(--accent);
+      position: relative;
+    }
+
+    .hero-question {
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      opacity: 0.85;
+      max-width: 500px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* SCROLL INDICATOR */
+    .scroll-hint {
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .scroll-hint::before, .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: #ccc;
+    }
+
+    /* CONTENT WRAPPER */
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* OPENER */
+    .opener {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 32px;
+      margin: 40px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      position: relative;
+    }
+
+    .opener-lead {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.15rem;
+      color: var(--main);
+      font-weight: 700;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .opener p {
+      font-size: 0.93rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    /* STEP SECTION */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step {
+      position: relative;
+      padding: 0 0 48px 0;
+    }
+
+    .step:last-child { padding-bottom: 0; }
+
+    /* vertical line */
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 52px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--sub), transparent);
+    }
+
+    .step-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .step-num {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--main);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.2rem;
+      color: var(--main);
+      font-weight: 700;
+      padding-top: 8px;
       line-height: 1.5;
     }
 
-    .merit-section p {
+    .step-body {
+      padding-left: 62px;
+    }
+
+    .step-body p {
+      font-size: 0.93rem;
       color: var(--muted);
+      line-height: 1.95;
       margin-bottom: 12px;
-      font-size: 0.95rem;
     }
 
-    .pace-box {
+    /* PULL QUOTE */
+    .pull-quote {
       background: var(--light);
-      border-radius: 12px;
-      padding: 28px;
-      margin: 32px 0;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 20px;
+      margin: 20px 0;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      color: var(--main);
+      font-weight: 700;
+      line-height: 1.6;
     }
 
-    .pace-box h3 {
-      color: var(--main);
+    /* VOICE CARD - simulated patient voice */
+    .voice-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin: 20px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-top: 3px solid var(--sub);
+      position: relative;
+    }
+
+    .voice-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--sub);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .voice-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.85;
+      font-style: italic;
+    }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: var(--main);
+      color: var(--white);
+      border-radius: 14px;
+      padding: 28px 28px;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .highlight-box .big-text {
       font-family: 'Noto Serif JP', serif;
-      font-size: 1.1rem;
-      margin-bottom: 16px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .highlight-box .small-text {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      line-height: 1.8;
+    }
+
+    /* PACE TABLE */
+    .pace-section {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 32px;
+      margin: 48px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+
+    .pace-section h3 {
+      font-family: 'Noto Serif JP', serif;
+      color: var(--main);
+      font-size: 1.15rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pace-section h3::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 2px;
     }
 
     .pace-item {
       display: flex;
-      gap: 12px;
       align-items: baseline;
-      margin-bottom: 10px;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid #eef3f0;
       font-size: 0.92rem;
     }
 
-    .pace-label {
+    .pace-item:last-of-type { border-bottom: none; }
+
+    .pace-stage {
       color: var(--main);
       font-weight: 700;
-      min-width: 160px;
+      min-width: 150px;
+      flex-shrink: 0;
     }
 
-    .pace-desc {
+    .pace-freq {
       color: var(--muted);
     }
 
-    .closing {
-      background: var(--main);
+    .pace-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid #eef3f0;
+      line-height: 1.85;
+    }
+
+    /* CLOSING CTA */
+    .closing-cta {
+      background: linear-gradient(135deg, #1C3028 0%, #2e5440 100%);
       color: var(--white);
-      border-radius: 12px;
-      padding: 32px;
-      margin: 40px 0;
+      border-radius: 16px;
+      padding: 40px 32px;
+      margin: 48px 0;
       text-align: center;
     }
 
-    .closing p {
-      font-size: 0.95rem;
-      opacity: 0.9;
-      margin-bottom: 10px;
+    .closing-cta .cta-main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+      font-weight: 700;
+      line-height: 1.7;
+      margin-bottom: 16px;
     }
 
-    .closing .highlight {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 1.15rem;
+    .closing-cta .cta-sub {
+      font-size: 0.88rem;
+      opacity: 0.8;
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 8px;
       font-weight: 700;
-      opacity: 1;
-      margin: 16px 0;
+      font-size: 0.92rem;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+
+    .btn-cta:hover { transform: translateY(-2px); opacity: 0.9; }
+
+    .btn-cta-primary {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .btn-cta-outline {
+      border: 2px solid rgba(255,255,255,0.6);
+      color: var(--white);
+    }
+
+    /* BACK LINK */
+    .back-wrap {
+      text-align: center;
+      margin-top: 40px;
     }
 
     .back-link {
-      display: inline-block;
-      margin-top: 32px;
-      background: var(--main);
-      color: var(--white);
-      padding: 14px 32px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      transition: background 0.2s, transform 0.1s;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
-    .back-link:hover { background: #2e5440; transform: translateY(-1px); }
-
+    /* FOOTER */
     footer {
       background: #1e3a28;
       color: rgba(255,255,255,0.6);
@@ -204,19 +443,25 @@
 
     footer a { color: rgba(255,255,255,0.7); }
 
-    @media (max-width: 720px) {
-      .pace-item { flex-direction: column; gap: 2px; }
-      .pace-label { min-width: unset; }
-    }
-
+    /* ANIMATION */
     .fade-up {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
     }
     .fade-up.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .opener { padding: 28px 22px; }
+      .step-body { padding-left: 0; margin-top: 12px; }
+      .step:not(:last-child)::after { display: none; }
+      .pace-stage { min-width: 120px; }
+      .pace-section { padding: 28px 20px; }
+      .closing-cta { padding: 32px 20px; }
     }
   </style>
 </head>
@@ -227,70 +472,128 @@
   <div class="header-tel"><a href="tel:0729987474">072-998-7474</a></div>
 </header>
 
-<div class="hero-sub">
-  <h1>継続通院のメリット</h1>
-  <p>今西健はり・灸院からのご案内</p>
+<div class="hero">
+  <div class="hero-label">Merit of Continuous Care</div>
+  <h1>「痛くなったら行く」を<br>くり返していませんか？</h1>
+  <p class="hero-question">その通院の仕方、じつは身体を疲弊させているかもしれません。</p>
 </div>
+
+<div class="scroll-hint">続きを読む</div>
 
 <div class="content">
-  <div class="intro">
-    当院では、治療院を「痛みが強くなった時だけ行く場所」としてではなく、身体と心を整えるための"かかりつけ"のような存在として活用していただくことを大切にしています。<br><br>
-    不調というのは、痛みが出ている場所だけに原因があるとは限りません。姿勢の崩れ、身体の使い方のクセ、筋肉や関節の負担、自律神経の乱れ、内臓の疲れ、生活習慣の積み重ねなど、さまざまな要素が重なって今の状態につながっていることも少なくありません。<br><br>
-    だからこそ、つらくなった時だけ対処するよりも、身体を定期的に整えていくことには大きな意味があります。
+
+  <!-- OPENER -->
+  <div class="opener fade-up">
+    <p class="opener-lead">痛みが強くなって、やっと予約を入れる。<br>少し楽になったら、また足が遠のく。</p>
+    <p>このサイクルを続けていると、そのたびに「ゼロから立て直す」ことの繰り返しになります。身体も、時間も、お金も、思った以上に消耗しています。</p>
+    <br>
+    <p>当院が継続通院をおすすめするのは、売上のためではありません。<strong>その方が、結果的にラクになるから</strong>です。</p>
   </div>
 
-  <div class="merit-section">
-    <h2>一時的な対処で終わらせないために</h2>
-    <p>その場の痛みを和らげるだけでなく、不調を繰り返しにくい身体を目指すためには、痛みの背景にある原因まで丁寧に見ていくことが大切です。</p>
-    <p>当院では、鍼灸だけでなく、整体、身体の使い方、生活習慣、栄養面まで含めて確認しながら、今のお身体に合った形で整えていきます。</p>
-  </div>
+  <!-- STEPS -->
+  <div class="steps">
 
-  <div class="merit-section">
-    <h2>自然治癒力を引き出しやすくするために</h2>
-    <p>鍼灸や整体によって血流や自律神経、筋肉や関節の動きが整うと、身体が本来持っている回復する力を発揮しやすくなります。</p>
-    <p>継続してメンテナンスしていくことで、疲れにくい、回復しやすい、崩れにくい身体を目指しやすくなります。</p>
-  </div>
+    <!-- STEP 1 -->
+    <div class="step fade-up">
+      <div class="step-head">
+        <div class="step-num">1</div>
+        <div class="step-title">「その場しのぎ」から<br>抜け出すために</div>
+      </div>
+      <div class="step-body">
+        <p>痛みが出ている場所だけを治療しても、また同じところが痛くなる。そんな経験はありませんか？</p>
+        <div class="pull-quote">
+          不調のほとんどは、痛む場所「以外」に原因がある。
+        </div>
+        <p>姿勢のクセ、身体の使い方のパターン、自律神経の乱れ、内臓の疲れ——これらが積み重なって、今の症状につながっています。一度の施術でそこまで整えることには限界があります。</p>
+        <p>当院では、鍼灸だけでなく、整体・運動療法・栄養面まで含めて丁寧に確認しながら、根本にアプローチしていきます。</p>
+      </div>
+    </div>
 
-  <div class="merit-section">
-    <h2>未来のための健康貯金になるために</h2>
-    <p>定期的に身体を整えることは、今つらい症状を軽くするためだけではなく、これから先の自分への投資にもなります。</p>
-    <p>慢性的な肩こりや腰痛、頭痛の予防、疲れの蓄積の軽減、年齢とともに起こりやすい不調の予防など、日々の積み重ねが将来の安心につながっていきます。</p>
-  </div>
+    <!-- STEP 2 -->
+    <div class="step fade-up">
+      <div class="step-head">
+        <div class="step-num">2</div>
+        <div class="step-title">身体が「自分で治る力」を<br>取り戻していく</div>
+      </div>
+      <div class="step-body">
+        <p>鍼灸や整体によって血流・自律神経・筋肉のバランスが整うと、身体が本来持っている「自然治癒力」が発揮されやすくなります。</p>
+        <div class="voice-card">
+          <div class="voice-label">PATIENT VOICE</div>
+          <p>「以前は毎月必ず肩が固まっていたのに、最近は2ヶ月に一度メンテナンスに来るだけで十分になってきました」</p>
+        </div>
+        <p>継続することで、施術と施術の間隔が自然に空いていく——それが、身体が自分で整えられるようになってきたサインです。</p>
+      </div>
+    </div>
 
-  <div class="merit-section">
-    <h2>心も整えやすくなるために</h2>
-    <p>身体がゆるみ、呼吸が深くなることで、眠りの質や気分の安定につながることもあります。</p>
-    <p>忙しい毎日の中で、自分の身体を整える時間を持つことは、単なる治療ではなく、心身をリセットする時間にもなります。</p>
-    <p>「疲れた時はここに来れば安心できる」<br>そんな場所としてご利用いただければと思っています。</p>
-  </div>
+    <!-- STEP 3 -->
+    <div class="step fade-up">
+      <div class="step-head">
+        <div class="step-num">3</div>
+        <div class="step-title">今の投資が、10年後の<br>自分を守る</div>
+      </div>
+      <div class="step-body">
+        <p>慢性的な肩こりや腰痛を「年のせい」と放置していると、年齢を重ねるほど対処が難しくなります。</p>
+        <div class="highlight-box">
+          <div class="big-text">定期的に整える習慣は、<br>「健康貯金」です。</div>
+          <div class="small-text">疲れの蓄積を防ぎ、将来起こりやすい不調のリスクを減らす。<br>今の通院が、これからの毎日の質を変えていきます。</div>
+        </div>
+      </div>
+    </div>
 
-  <div class="pace-box">
+    <!-- STEP 4 -->
+    <div class="step fade-up">
+      <div class="step-head">
+        <div class="step-num">4</div>
+        <div class="step-title">身体が整うと、<br>心も変わってくる</div>
+      </div>
+      <div class="step-body">
+        <p>施術を重ねるうちに、「なんとなく眠りが深くなった」「気持ちがざわつかなくなった」というご感想をいただくことがあります。</p>
+        <p>身体のこわばりがゆるみ、呼吸が深くなることで、自律神経が落ち着き、気分の安定や睡眠の改善につながることがあります。</p>
+        <div class="pull-quote">
+          「疲れたらここに来れば大丈夫」——そんな場所であり続けたいと思っています。
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /steps -->
+
+  <!-- PACE -->
+  <div class="pace-section fade-up">
     <h3>通院ペースの目安</h3>
     <div class="pace-item">
-      <span class="pace-label">症状が強い時期</span>
-      <span class="pace-desc">週1〜2回程度</span>
+      <span class="pace-stage">症状が強い時期</span>
+      <span class="pace-freq">週1〜2回程度</span>
     </div>
     <div class="pace-item">
-      <span class="pace-label">落ち着いてきた時期</span>
-      <span class="pace-desc">1〜2週間に1回程度</span>
+      <span class="pace-stage">落ち着いてきた時期</span>
+      <span class="pace-freq">1〜2週間に1回程度</span>
     </div>
     <div class="pace-item">
-      <span class="pace-label">メンテナンス・予防</span>
-      <span class="pace-desc">月1回程度、または季節の変わり目に集中ケア</span>
+      <span class="pace-stage">メンテナンス・予防期</span>
+      <span class="pace-freq">月1回、または季節の変わり目に集中ケア</span>
     </div>
-    <p style="color:var(--muted); font-size:0.85rem; margin-top:16px;">通院ペースは症状や生活状況によって異なります。当院では、初回にしっかりと状態を確認したうえで、無理のない範囲でご提案いたします。必要以上に通院をおすすめすることはありませんので、ご安心ください。</p>
+    <p class="pace-note">
+      通院ペースは症状や生活状況によって異なります。初回にしっかりと状態を確認したうえで、無理のない範囲でご提案します。<strong>必要以上に通院をすすめることはありません</strong>ので、ご安心ください。
+    </p>
   </div>
 
-  <div class="closing">
-    <p>今西健はり・灸院では、肩こりや腰痛だけでなく、胃腸の不調、自律神経の乱れ、疲れやすさ、眠りの浅さ、産後の不調など、身体全体のつながりを見ながら丁寧に対応しています。</p>
-    <p class="highlight">「痛みが強くなってから行く」のではなく、<br>「悪くなりすぎる前に整える」</p>
-    <p>その積み重ねが、これからの身体を守ることにつながります。</p>
+  <!-- CLOSING CTA -->
+  <div class="closing-cta fade-up">
+    <p class="cta-main">「悪くなりすぎる前に整える」<br>その積み重ねが、これからの身体を守ります。</p>
+    <p class="cta-sub">
+      肩こり・腰痛・頭痛・胃腸の不調・自律神経の乱れ・疲れやすさ・産後の不調など、<br>身体全体のつながりを見ながら丁寧に対応しています。
+    </p>
+    <div class="cta-buttons">
+      <a href="tel:0729987474" class="btn-cta btn-cta-primary">電話で相談する</a>
+      <a href="first-visit.html" class="btn-cta btn-cta-outline">はじめての方へ</a>
+    </div>
   </div>
 
-  <div style="text-align:center;">
-    <a href="index.html" class="back-link">トップページに戻る</a>
+  <div class="back-wrap">
+    <a href="index.html" class="back-link">← トップページに戻る</a>
   </div>
-</div>
+
+</div><!-- /content -->
 
 <footer>
   <p style="color:rgba(255,255,255,0.9); font-weight:700; margin-bottom:8px;">今西健はり・灸院</p>
@@ -303,11 +606,8 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, { threshold: 0.15 });
-document.querySelectorAll('.merit-section, .pace-box, .closing').forEach(el => {
-  el.classList.add('fade-up');
-  observer.observe(el);
-});
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 
 </body>

@@ -127,7 +127,7 @@
 
     /* ===== HERO ===== */
     .hero {
-      background: var(--primary);
+      background: url('images/exterior.jpg') center center / cover no-repeat;
       padding: 80px 24px 72px;
       color: var(--white);
       position: relative;
@@ -138,7 +138,11 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(122,171,138,0.2) 0%, transparent 60%);
+      background: rgba(20, 40, 30, 0.72);
+    }
+
+    @media (max-width: 600px) {
+      .hero::before { background: rgba(20, 40, 30, 0.82); }
     }
 
     .hero-inner {

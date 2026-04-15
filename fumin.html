@@ -539,6 +539,82 @@
 
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+    /* ===== EVIDENCE ===== */
+    .evidence-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 40px;
+      margin: 28px 0;
+      border: 1px solid var(--border);
+    }
+
+    .evidence-section .ev-header { margin-bottom: 24px; }
+
+    .evidence-section h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .ev-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .paper-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+
+    .paper-item {
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color 0.2s;
+    }
+
+    .paper-item:hover { border-color: var(--accent); }
+
+    .paper-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .tag-meta   { background: #e8f0fe; color: #3557c0; }
+    .tag-rct    { background: #e6f4ea; color: #1a7340; }
+    .tag-review { background: #fff3e0; color: #b45309; }
+    .tag-cochrane { background: #f3e8ff; color: #7c3aed; }
+
+    .paper-title {
+      font-size: 0.87rem;
+      color: var(--primary);
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+
+    .paper-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .paper-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 8px;
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 640px) {
       .header { padding: 0 20px; }
@@ -762,6 +838,56 @@
         「ここに来ると、なぜか眠れる」——そんな安心感を感じていただける場所でありたいと思っています。<br><br>
         眠れない夜が続いているあなたへ、少しでも参考になれば幸いです。
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVIDENCE ===== -->
+<section class="section" style="background: var(--white); padding-top: 60px; padding-bottom: 60px;">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Evidence</span>
+      <h2 class="section-title">参考文献・関連研究</h2>
+    </div>
+    <div class="evidence-section fade-in">
+      <div class="ev-header">
+        <h3>鍼灸と不眠に関する主な論文・総説</h3>
+        <p class="ev-note">
+          以下は、鍼灸と不眠・睡眠の関係を扱った比較的参照しやすいPubMed掲載論文・総説です。研究によって対象・方法・評価指標にばらつきがあるため、「一定の改善効果の可能性を示すものが多い」という段階として誠実にお伝えしています。
+        </p>
+      </div>
+      <ul class="paper-list">
+        <li class="paper-item">
+          <span class="paper-tag tag-cochrane">Cochrane レビュー</span>
+          <p class="paper-title">Acupuncture for insomnia<br><span style="font-weight:400; font-size:0.82rem;">Cheuk DK et al. — Cochrane Database of Systematic Reviews, 2012</span></p>
+          <p class="paper-desc">不眠に対する鍼灸のランダム化比較試験を系統的に評価したコクランレビュー。一部の試験で睡眠の質・睡眠時間の改善が示されたが、試験の質や方法論にばらつきがあることも指摘されている。最も格式の高いエビデンス源のひとつ。</p>
+          <a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD005472.pub3/full" target="_blank" rel="noopener" class="paper-link">Cochrane Library で確認 →</a>
+        </li>
+        <li class="paper-item">
+          <span class="paper-tag tag-meta">メタ解析 2021</span>
+          <p class="paper-title">Acupuncture for primary insomnia: An updated systematic review and meta-analysis<br><span style="font-weight:400; font-size:0.82rem;">Yin X et al. — Sleep Medicine, 2021</span></p>
+          <p class="paper-desc">一次性不眠症に対する鍼灸のRCTを統合したメタ解析。Pittsburgh Sleep Quality Index（PSQI）スコアで有意な改善が認められた。偽鍼との比較でも効果が示されており、比較的信頼度の高い知見として参照しやすい。</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/33493715/" target="_blank" rel="noopener" class="paper-link">PubMed で確認 →</a>
+        </li>
+        <li class="paper-item">
+          <span class="paper-tag tag-meta">メタ解析 2019</span>
+          <p class="paper-title">Comparative efficacy and acceptability of non-surgical treatments for insomnia disorder in adults: a systematic review and network meta-analysis<br><span style="font-weight:400; font-size:0.82rem;">Muñoz-Navarro R et al. ／ Lancet 系列掲載</span></p>
+          <p class="paper-desc">不眠に対する複数の非薬物療法（CBT-I・鍼灸・弛緩法など）をネットワークメタ解析で比較。CBT-Iが最も強いエビデンスを持ちつつ、鍼灸も補完的な選択肢として位置づけられている。</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/31374901/" target="_blank" rel="noopener" class="paper-link">PubMed で確認 →</a>
+        </li>
+        <li class="paper-item">
+          <span class="paper-tag tag-review">系統的レビュー 2009</span>
+          <p class="paper-title">Acupuncture for treatment of insomnia: a systematic review of randomized controlled trials<br><span style="font-weight:400; font-size:0.82rem;">Cao H et al. — Journal of Alternative and Complementary Medicine, 2009</span></p>
+          <p class="paper-desc">46のRCTを分析したレビュー。鍼灸が総睡眠時間の延長、睡眠効率の改善、覚醒回数の減少に寄与する可能性を示した。古めだが、不眠と鍼灸に関する包括的なレビューとして広く参照されている。</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/19785485/" target="_blank" rel="noopener" class="paper-link">PubMed で確認 →</a>
+        </li>
+        <li class="paper-item">
+          <span class="paper-tag tag-rct">RCT</span>
+          <p class="paper-title">Acupuncture for residual insomnia associated with major depressive disorder: a placebo- and sham-controlled randomized trial<br><span style="font-weight:400; font-size:0.82rem;">Yeung WF et al. — Biological Psychiatry, 2011</span></p>
+          <p class="paper-desc">うつ病に伴う不眠に対して、本物の鍼灸と偽鍼を比較したRCT。鍼灸群でPSQIスコアおよびポリソムノグラフィー（睡眠検査）の指標が有意に改善。睡眠の客観的評価を含む点で信頼性が高い研究。</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/21251644/" target="_blank" rel="noopener" class="paper-link">PubMed で確認 →</a>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-327XPVYZXE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-327XPVYZXE');
+  </script>
+  <title>美容鍼｜顔だけでなく全身から整える｜今西健はり・灸院｜大阪府八尾市</title>
+  <meta name="description" content="「美容鍼は、顔だけの問題ではありません」。むくみ・たるみ・くすみ・フェイスライン。全身の状態から肌を整える美容鍼。東洋医学×全身調整で内側から美しさを引き出します。大阪府八尾市堤町。初診約90分。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="美容鍼｜今西健はり・灸院｜大阪府八尾市">
+  <meta property="og:description" content="顔に鍼をするだけではない。全身を整えながら、内側から美しさを引き出す美容鍼。八尾市堤町の鍼灸院。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1C3028;
+      --accent: #7AAB8A;
+      --gold: #C8963E;
+      --rose: #b5776a;
+      --bg: #F5F1EC;
+      --white: #FFFFFF;
+      --text: #1A1A1A;
+      --muted: #6B7280;
+      --border: #E5DDD4;
+      --radius: 20px;
+      --radius-lg: 28px;
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+      font-size: 16px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245,241,236,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      letter-spacing: 0.06em;
+    }
+
+    .header-tel { font-size: 0.9rem; font-weight: 700; color: var(--primary); }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #2a1f1a;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/flowers.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.30;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(42, 31, 26, 0.55) 0%,
+        rgba(28, 48, 40, 0.72) 55%,
+        rgba(28, 48, 40, 0.92) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: var(--white);
+      padding: 80px 24px 64px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 20px;
+      padding: 5px 16px;
+      margin-bottom: 28px;
+    }
+
+    .hero-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.6rem, 4.2vw, 2.7rem);
+      font-weight: 700;
+      line-height: 1.55;
+      letter-spacing: 0.04em;
+      margin-bottom: 20px;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      display: block;
+      font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-sub {
+      font-size: clamp(0.88rem, 1.8vw, 1rem);
+      line-height: 2;
+      color: rgba(255,255,255,0.75);
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: transform 0.2s var(--ease), opacity 0.2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    .btn-primary { background: var(--gold); color: var(--white); }
+    .btn-outline { border: 2px solid rgba(255,255,255,0.5); color: var(--white); background: transparent; }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+
+    .section-label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.35rem, 3vw, 1.9rem);
+      color: var(--primary);
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    /* ===== LEAD ===== */
+    .lead-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 48px 44px;
+      margin: -40px auto 0;
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      box-shadow: 0 8px 48px rgba(28,48,40,0.12);
+    }
+
+    .lead-voices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .lead-voice {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.02rem;
+      color: var(--primary);
+      border-left: 3px solid var(--gold);
+      padding-left: 16px;
+      line-height: 1.65;
+    }
+
+    .lead-body { color: var(--muted); font-size: 0.93rem; line-height: 2; }
+
+    /* ===== PULL QUOTE ===== */
+    .pull-quote {
+      background: #fdf6f0;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      color: var(--primary);
+      font-weight: 700;
+      line-height: 1.65;
+    }
+
+    /* ===== REASON CARDS ===== */
+    .reason-list { display: flex; flex-direction: column; gap: 14px; margin: 28px 0; }
+
+    .reason-card {
+      display: flex;
+      gap: 18px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      align-items: flex-start;
+      transition: box-shadow 0.25s var(--ease);
+    }
+
+    .reason-card:hover { box-shadow: 0 6px 28px rgba(28,48,40,0.08); }
+    .reason-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .reason-body h4 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.98rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .reason-body p { font-size: 0.86rem; color: var(--muted); line-height: 1.9; }
+
+    /* ===== DARK BOX ===== */
+    .dark-box {
+      background: var(--primary);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 44px 44px;
+      margin: 28px 0;
+    }
+
+    .dark-box .sub-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .dark-box h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .dark-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+    .dark-list li {
+      display: flex;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.75;
+    }
+
+    .dark-list li::before { content: '→'; color: var(--accent); flex-shrink: 0; font-weight: 700; }
+
+    /* ===== FEATURE CARDS ===== */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 22px;
+      border-top: 3px solid var(--accent);
+      transition: box-shadow 0.2s var(--ease);
+    }
+
+    .feature-card:hover { box-shadow: 0 6px 24px rgba(28,48,40,0.08); }
+
+    .feature-num {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.98rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .feature-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.9; }
+
+    /* ===== CHECKLIST ===== */
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .check-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+
+    /* ===== OUTCOME LIST ===== */
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 28px 0;
+    }
+
+    .outcome-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      box-shadow: 0 2px 10px rgba(28,48,40,0.05);
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 500;
+      line-height: 1.65;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list { display: flex; flex-direction: column; gap: 14px; margin: 28px 0; }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+    }
+
+    .faq-q {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.97rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .faq-q::before {
+      content: 'Q';
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.75rem;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .faq-a {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.9;
+      padding-left: 32px;
+    }
+
+    /* ===== NOTE ARTICLES ===== */
+    .note-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      margin: 28px 0;
+      border: 1px solid var(--border);
+    }
+
+    .note-section h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .note-section h3::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .note-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+
+    .note-list li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--primary);
+      transition: background 0.2s;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .note-list li:last-child a { border-bottom: none; }
+    .note-list li a:hover { background: #f5f9f6; }
+    .note-list li a::before { content: '📝'; font-size: 0.9rem; flex-shrink: 0; }
+
+    /* ===== EVIDENCE ===== */
+    .evidence-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 40px;
+      margin: 28px 0;
+      border: 1px solid var(--border);
+    }
+
+    .ev-header { margin-bottom: 22px; }
+
+    .ev-header h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .ev-note { font-size: 0.82rem; color: var(--muted); line-height: 1.85; }
+
+    .paper-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+
+    .paper-item {
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color 0.2s;
+    }
+
+    .paper-item:hover { border-color: var(--accent); }
+
+    .paper-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .tag-meta     { background: #e8f0fe; color: #3557c0; }
+    .tag-rct      { background: #e6f4ea; color: #1a7340; }
+    .tag-review   { background: #fff3e0; color: #b45309; }
+    .tag-pilot    { background: #f3e8ff; color: #7c3aed; }
+
+    .paper-title { font-size: 0.87rem; color: var(--primary); font-weight: 700; line-height: 1.5; margin-bottom: 6px; }
+    .paper-desc  { font-size: 0.82rem; color: var(--muted); line-height: 1.85; }
+
+    .paper-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 8px;
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ===== FIRST VISIT ===== */
+    .first-visit {
+      background: linear-gradient(135deg, #f0f7f2 0%, #e8f2ec 100%);
+      border-radius: var(--radius-lg);
+      padding: 40px 40px;
+      margin: 28px 0;
+    }
+
+    .first-visit h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .first-visit p { font-size: 0.92rem; color: var(--muted); line-height: 2; }
+
+    /* ===== CLOSING ===== */
+    .closing {
+      background: linear-gradient(150deg, #2a1f1a 0%, #1C3028 60%, #2e5440 100%);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 52px 44px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .closing-voices { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+
+    .closing-voice {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .closing-voice::before { content: '◦'; color: var(--accent); }
+
+    .closing-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+      font-weight: 700;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .closing-sub { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.95; margin-bottom: 32px; }
+    .closing-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+    .clinic-info { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 2; }
+
+    /* ===== BACK ===== */
+    .back-wrap { text-align: center; padding: 16px 0 48px; }
+    .back-link { font-size: 0.85rem; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.7); }
+
+    /* ===== ANIMATION ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 640px) {
+      .header { padding: 0 20px; }
+      .hero-content { padding: 72px 20px 52px; }
+      .lead-section { padding: 32px 22px; margin: -24px 16px 0; }
+      .section { padding: 60px 0; }
+      .check-grid { grid-template-columns: 1fr; }
+      .outcome-grid { grid-template-columns: 1fr; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .dark-box { padding: 32px 24px; }
+      .closing { padding: 40px 24px; }
+      .evidence-section { padding: 28px 20px; }
+      .note-section { padding: 28px 22px; }
+      .first-visit { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="header-logo">今西健はり・灸院</a>
+  <a href="tel:0729987474" class="header-tel">072-998-7474</a>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-badge">Cosmetic Acupuncture</span>
+    <h1 class="hero-title">
+      <em>美容鍼は、顔だけの問題ではありません</em>
+      全身を整えながら、<br>内側から美しさを引き出す。
+    </h1>
+    <p class="hero-sub">
+      むくみ・たるみ・くすみ・フェイスライン。<br>
+      顔に出ている変化を、全身の状態から見ていきます。
+    </p>
+    <div class="hero-cta">
+      <a href="tel:0729987474" class="btn btn-primary">電話で相談する</a>
+      <a href="#first-visit" class="btn btn-outline">はじめての方へ</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEAD ===== -->
+<div class="container">
+  <div class="lead-section fade-in">
+    <div class="lead-voices">
+      <p class="lead-voice">「顔のたるみが気になる」</p>
+      <p class="lead-voice">「肌のくすみやむくみが抜けにくい」</p>
+      <p class="lead-voice">「美容鍼を受けたいけれど、顔に鍼をするだけで本当に変わるのか不安」</p>
+    </div>
+    <p class="lead-body">
+      今西健はり・灸院の美容鍼は、ただ顔に鍼をするだけではありません。お顔に出ている変化を、全身の状態から見ていくことを大切にしています。<br><br>
+      肌の状態やむくみ、血色感、フェイスラインの印象は、顔だけで完結しているものではないからです。睡眠・食事・胃腸の働き・呼吸の浅さ・首肩の緊張・血流・自律神経の乱れ——こうした全身の積み重ねが、肌や表情にあらわれてきます。
+    </p>
+  </div>
+</div>
+
+<!-- ===== WHY WHOLE BODY ===== -->
+<section class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Why Whole Body</span>
+      <h2 class="section-title">顔だけに鍼をするのではなく、<br>全身から整える理由</h2>
+    </div>
+    <div class="pull-quote fade-in">
+      東洋医学では、肺と大腸は「表裏関係」にあり、肺は「皮膚」とも深い関係があるとされます。肌の調子を考えるとき、呼吸の状態やお腹の状態まで見ていくことが大切です。
+    </div>
+    <p class="fade-in" style="color:var(--muted); font-size:0.93rem; line-height:2; margin-bottom:20px;">
+      例えば、こうした状態があると、お顔だけを施術しても土台が整っていないため、変化が安定しにくいことがあります。
+    </p>
+    <div class="reason-list fade-in">
+      <div class="reason-card">
+        <div class="reason-icon">🫁</div>
+        <div class="reason-body">
+          <h4>呼吸が浅く、首肩が緊張しやすい</h4>
+          <p>胸郭の硬さや浅い呼吸は、顔への血流を滞らせます。首肩の慢性緊張がフェイスラインの重さやむくみにつながることがあります。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">🫀</div>
+        <div class="reason-body">
+          <h4>便通が不安定で、肌荒れしやすい</h4>
+          <p>東洋医学では肺と大腸は表裏の関係。腸内環境の乱れは「肺の気」を弱め、皮膚の乾燥・くすみ・吹き出ものとして表面に現れやすくなります。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">🧊</div>
+        <div class="reason-body">
+          <h4>冷えやむくみが強く、フェイスラインが重たく見える</h4>
+          <p>末梢の血流低下や水分代謝の乱れは、顔のむくみやくすみとして現れます。全身の循環を整えることが顔への直接的なアプローチと同じくらい重要です。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">😴</div>
+        <div class="reason-body">
+          <h4>疲れが抜けず、顔色がすぐれない</h4>
+          <p>睡眠の質・自律神経の乱れ・過労は、肌の血色や回復力に直結します。内側の疲れを取り除かない限り、表面からだけのアプローチには限界があります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="section" style="background: var(--white); padding-top: 60px; padding-bottom: 60px;">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Features</span>
+      <h2 class="section-title">今西健はり・灸院の<br>美容鍼の特徴</h2>
+    </div>
+    <div class="feature-grid fade-in">
+      <div class="feature-card">
+        <div class="feature-num">FEATURE 01</div>
+        <div class="feature-title">顔だけで終わらない、<br>全身調整の美容鍼</div>
+        <p class="feature-desc">お顔の筋肉・血流・むくみ・表情の緊張にアプローチしながら、必要に応じて首肩・頭・手足・お腹など全身の調整も行います。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">FEATURE 02</div>
+        <div class="feature-title">内側から整える<br>視点を大切に</div>
+        <p class="feature-desc">睡眠・胃腸・便通・ストレス・呼吸・冷えなど「なぜ今その状態になっているのか」を全身から見ていきます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">FEATURE 03</div>
+        <div class="feature-title">東洋医学と現代的な<br>身体観の両方を活かす</div>
+        <p class="feature-desc">東洋医学の見立てだけに偏らず、姿勢・筋肉の緊張・血流・自律神経・生活習慣も含めて総合的に考えます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">FEATURE 04</div>
+        <div class="feature-title">強い刺激ではなく<br>丁寧な施術を</div>
+        <p class="feature-desc">美容鍼が初めての方でも安心して受けていただけるよう、お身体の状態を確認しながら進めます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOR WHOM ===== -->
+<section class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">For You</span>
+      <h2 class="section-title">このようなお悩みの方に<br>おすすめです</h2>
+    </div>
+    <div class="check-grid fade-in">
+      <div class="check-item"><span class="check-icon">◦</span>顔のむくみが気になる</div>
+      <div class="check-item"><span class="check-icon">◦</span>フェイスラインのもたつきが気になる</div>
+      <div class="check-item"><span class="check-icon">◦</span>肌のくすみや血色の悪さが気になる</div>
+      <div class="check-item"><span class="check-icon">◦</span>目の疲れや顔のこわばりがある</div>
+      <div class="check-item"><span class="check-icon">◦</span>食いしばりや首肩こりが強い</div>
+      <div class="check-item"><span class="check-icon">◦</span>便通や睡眠の乱れが肌に出やすい</div>
+      <div class="check-item"><span class="check-icon">◦</span>美容だけでなく、身体も一緒に整えたい</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUTCOME ===== -->
+<section class="section" style="background: var(--white); padding-top: 60px; padding-bottom: 60px;">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Expected Outcome</span>
+      <h2 class="section-title">全身の流れが整うと<br>こんな変化が期待できます</h2>
+    </div>
+    <div class="dark-box fade-in">
+      <span class="sub-label">Whole Body Approach</span>
+      <h3>お顔は、身体の内側の状態を映す鏡です</h3>
+      <ul class="dark-list">
+        <li>どれだけ高価な化粧品を使っても、睡眠が乱れ、呼吸が浅く、胃腸が疲れ、首肩がガチガチのままであれば、肌や表情には限界があります。</li>
+        <li>反対に、全身の流れが整ってくると、自然な美しさが表情や肌ににじみ出てきます。</li>
+      </ul>
+    </div>
+    <div class="outcome-grid fade-in">
+      <div class="outcome-card">顔色が明るく見える</div>
+      <div class="outcome-card">むくみが抜けやすくなる</div>
+      <div class="outcome-card">表情がやわらかくなる</div>
+      <div class="outcome-card">肌の調子が安定しやすくなる</div>
+      <div class="outcome-card">疲れて見えにくくなる</div>
+      <div class="outcome-card">フェイスラインがすっきりしてくる</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">よくあるご質問</h2>
+    </div>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <p class="faq-q">顔だけではなく、身体にも鍼をしますか？</p>
+        <p class="faq-a">はい。必要に応じて全身の調整も行います。お顔のお悩みが身体の状態と関係していることは少なくありません。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">美容鍼は痛いですか？</p>
+        <p class="faq-a">刺激の感じ方には個人差がありますが、できるだけ負担の少ないように丁寧に行います。初めての方にも配慮して進めますのでご安心ください。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">どのくらいの頻度で受けるとよいですか？</p>
+        <p class="faq-a">お悩みの内容や生活習慣によって異なります。初回に状態をみた上で、無理のない通院ペースをご提案します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FIRST VISIT ===== -->
+<section class="section" style="background: var(--white); padding-top: 60px; padding-bottom: 60px;" id="first-visit">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">First Visit</span>
+      <h2 class="section-title">はじめての方へ</h2>
+    </div>
+    <div class="first-visit fade-in">
+      <h3>初診は約90分。お顔だけでなく体全体を丁寧に確認します。</h3>
+      <p>
+        顔のお悩みだけでなく、睡眠・便通・冷え・疲労感・首肩こり・食事・ストレスの状態なども含めて確認し、今のお身体に合った施術方針をご提案します。<br><br>
+        「美容鍼に興味はあるけれど、どこに行けばいいか分からない」<br>
+        「顔だけでなく、身体も含めてちゃんと見てほしい」<br><br>
+        そのような方にこそ、一度受けていただきたいと考えています。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOTE ARTICLES ===== -->
+<section class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Related Articles</span>
+      <h2 class="section-title">美容・スキンケアについての<br>コラム（note）</h2>
+    </div>
+    <div class="note-section fade-in">
+      <h3>院長が書いた関連記事</h3>
+      <ul class="note-list">
+        <li><a href="https://note.com/takeshityan/n/n1cc469928122" target="_blank" rel="noopener">「洗いすぎ」が肌をつらくしていることもあります。皮膚科の知見と東洋医学で考える、引き算のスキンケア</a></li>
+        <li><a href="https://note.com/takeshityan/n/nfccda6facf82" target="_blank" rel="noopener">老けない食卓のつくり方｜毎日の食事で内側からアンチエイジング</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVIDENCE ===== -->
+<section class="section" style="background: var(--white); padding-top: 60px; padding-bottom: 60px;">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Evidence</span>
+      <h2 class="section-title">参考文献・関連研究</h2>
+    </div>
+    <div class="evidence-section fade-in">
+      <div class="ev-header">
+        <h3>美容鍼・鍼灸と皮膚に関する主な論文</h3>
+        <p class="ev-note">
+          美容鍼の分野は、腰痛や頭痛と比べるとまだ大規模な研究が十分ではありません。現時点では「有望ではあるが、さらに質の高い研究が必要な段階」という位置づけです。「絶対に効く」ではなく「改善の可能性を示す研究がある」として誠実にお伝えします。
+        </p>
+      </div>
+      <ul class="paper-list">
+        <li class="paper-item">
+          <span class="paper-tag tag-review">系統的レビュー 2018</span>
+          <p class="paper-title">Acupuncture for cosmetic use: a systematic review of prospective studies<br><span style="font-weight:400; font-size:0.82rem;">Journal of Alternative and Complementary Medicine, 2018</span></p>
+          <p class="paper-desc">美容目的の鍼に関する前向き研究をまとめたレビュー。前向きな報告が多い一方、対象者数が少ない・RCTが少ない・方法論の質にばらつきがある点も指摘されており、「有望だが決定打ではない」という位置づけ。</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener" class="paper-link">PubMed で確認 →</a>
+        </li>
+        <li class="paper-item">
+          <span class="paper-tag tag-pilot">パイロット研究 2013</span>
+          <p class="paper-title">Effect of facial cosmetic acupuncture on facial elasticity: an open-label, single-arm pilot study<br><span style="font-weight:400; font-size:0.82rem;">Evidence-Based Complementary and Alternative Medicine, 2013</span></p>
+          <p class="paper-desc">顔の弾力に対して有望な結果を示したパイロット試験。オープンラベル・単群での試験のため、証拠の強さとしては「初期データ」として位置づけられる。今後のRCTへの足がかりとなる研究。</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/24348696/" target="_blank" rel="noopener" class="paper-link">PubMed で確認 →</a>
+        </li>
+        <li class="paper-item">
+          <span class="paper-tag tag-review">系統的レビュー 2015</span>
+          <p class="paper-title">Acupuncture as a Treatment Modality in Dermatology: A Systematic Review<br><span style="font-weight:400; font-size:0.82rem;">Journal of Alternative and Complementary Medicine, 2015</span></p>
+          <p class="paper-desc">皮膚科領域における鍼の研究を広くまとめたレビュー。美容鍼に限定した論文ではないが、ニキビ・肝斑・乾燥・炎症など皮膚全般への鍼の可能性を整理しており、美容系の話を幅広く支える文献として参照しやすい。</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/25830280/" target="_blank" rel="noopener" class="paper-link">PubMed で確認 →</a>
+        </li>
+        <li class="paper-item">
+          <span class="paper-tag tag-rct">RCT 2025</span>
+          <p class="paper-title">Is Acupuncture Effective in Diminishing Frown Lines? Evidence From a Randomized Controlled Trial<br><span style="font-weight:400; font-size:0.82rem;">Journal of Cosmetic Dermatology, 2025</span></p>
+          <p class="paper-desc">眉間のしわに対するランダム化比較試験。美容鍼に特化したRCTとしては比較的新しく注目される一方、1本の試験にとどまるため、再現研究や大規模試験によるさらなる検証が期待される段階。</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener" class="paper-link">PubMed で確認 →</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLOSING CTA ===== -->
+<section class="section">
+  <div class="container">
+    <div class="closing fade-in">
+      <div class="closing-voices">
+        <p class="closing-voice">顔だけでなく、身体も含めてちゃんと見てほしい</p>
+        <p class="closing-voice">美容と健康を切り離さず、丁寧に向き合いたい</p>
+        <p class="closing-voice">内側から整えることで、自然な美しさを取り戻したい</p>
+      </div>
+      <p class="closing-title">
+        美容は、表面だけを整えることではありません。<br>
+        身体の内側が整ってこそ、表情や肌、雰囲気に<br>自然な美しさが出てきます。
+      </p>
+      <p class="closing-sub">
+        お顔のお悩みをきっかけに、体全体も見直したい方へ。<br>そのような方の力になれれば嬉しく思います。
+      </p>
+      <div class="closing-buttons">
+        <a href="tel:0729987474" class="btn btn-primary">電話で相談する　072-998-7474</a>
+        <a href="index.html#contact" class="btn btn-outline">LINEで問い合わせる</a>
+      </div>
+      <p class="clinic-info">
+        今西健はり・灸院　大阪府八尾市堤町2-30-59<br>
+        LINE ID: takeshityan
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="back-wrap">
+    <a href="index.html" class="back-link">← トップページに戻る</a>
+  </div>
+</div>
+
+<footer>
+  <p style="color:rgba(255,255,255,0.9); font-weight:700; margin-bottom:8px;">今西健はり・灸院</p>
+  <p>〒 大阪府八尾市堤町2-30-59　TEL: <a href="tel:0729987474">072-998-7474</a>　LINE ID: takeshityan　<a href="https://note.com/takeshityan" target="_blank" rel="noopener">note</a></p>
+  <p style="margin-top:16px;">&copy; 今西健はり・灸院. All rights reserved.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

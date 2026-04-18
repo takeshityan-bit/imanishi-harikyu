@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://heartfelt-peony-0088af.netlify.app/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/</loc>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://heartfelt-peony-0088af.netlify.app/first-visit.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/first-visit.html</loc>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://heartfelt-peony-0088af.netlify.app/merit.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/merit.html</loc>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/youtsu.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/zutsuu.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/hizatsu.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/jiritsushinkei.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/fumin.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/biyoshin.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

@@ -1,6 +1,12 @@
 require 'webrick'
 require 'net/http'
 require 'uri'
+require 'digest'
+require 'fileutils'
+
+# 画像キャッシュディレクトリ
+CACHE_DIR = File.join(Dir.pwd, '.img_cache')
+FileUtils.mkdir_p(CACHE_DIR)
 
 server = WEBrick::HTTPServer.new(
   Port: 8080,
@@ -27,46 +33,61 @@ server.mount_proc '/tts' do |req, res|
   res.body = response.body
 end
 
-# 画像プロキシ: /img?prompt=テキスト&seed=数字
+# 画像プロキシ: /img?prompt=テキスト&seed=数字（キャッシュ付き）
 server.mount_proc '/img' do |req, res|
   prompt = req.query['prompt'] || 'wellness'
   seed   = req.query['seed'] || '42'
 
-  encoded = URI.encode_www_form_component(prompt)
-  uri = URI("https://image.pollinations.ai/prompt/#{encoded}?width=1080&height=1920&nologo=true&seed=#{seed}")
+  # キャッシュキー（プロンプト+seedのハッシュ）
+  cache_key = Digest::MD5.hexdigest("#{prompt}_#{seed}")
+  cache_path = File.join(CACHE_DIR, "#{cache_key}.jpg")
 
-  http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
-  http.open_timeout = 30
-  http.read_timeout = 60
-
-  # Pollinations はリダイレクトする場合がある
-  max_redirects = 5
-  current_uri = uri
   body = nil
   content_type = 'image/jpeg'
 
-  max_redirects.times do
-    request = Net::HTTP::Get.new(current_uri)
-    request['User-Agent'] = 'Mozilla/5.0'
-    h = Net::HTTP.new(current_uri.host, current_uri.port)
-    h.use_ssl = true
-    h.open_timeout = 30
-    h.read_timeout = 60
-    response = h.request(request)
+  # キャッシュがあればそれを返す
+  if File.exist?(cache_path) && File.size(cache_path) > 5000
+    puts "IMG CACHE HIT: #{prompt[0..50]}..."
+    body = File.binread(cache_path)
+  else
+    puts "IMG FETCH: #{prompt[0..50]}... (seed=#{seed})"
+    encoded = URI.encode_www_form_component(prompt)
+    # 540x960で生成（高速化。Canvasが1080x1920に拡大してもOK）
+    uri = URI("https://image.pollinations.ai/prompt/#{encoded}?width=540&height=960&nologo=true&seed=#{seed}")
 
-    if response.is_a?(Net::HTTPRedirection)
-      current_uri = URI(response['location'])
+    max_redirects = 5
+    current_uri = uri
+
+    max_redirects.times do
+      h = Net::HTTP.new(current_uri.host, current_uri.port)
+      h.use_ssl = true
+      h.open_timeout = 30
+      h.read_timeout = 120  # Pollinationsは遅い
+      request = Net::HTTP::Get.new(current_uri)
+      request['User-Agent'] = 'Mozilla/5.0'
+      response = h.request(request)
+
+      if response.is_a?(Net::HTTPRedirection)
+        current_uri = URI(response['location'])
+      else
+        body = response.body
+        content_type = response['Content-Type'] || 'image/jpeg'
+        break
+      end
+    end
+
+    # 有効な画像ならキャッシュに保存
+    if body && body.bytesize > 5000
+      File.binwrite(cache_path, body)
+      puts "IMG CACHED: #{cache_key} (#{body.bytesize} bytes)"
     else
-      body = response.body
-      content_type = response['Content-Type'] || 'image/jpeg'
-      break
+      puts "IMG FAILED: response too small (#{body&.bytesize || 0} bytes)"
     end
   end
 
   res['Content-Type'] = content_type
   res['Access-Control-Allow-Origin'] = '*'
-  res['Cache-Control'] = 'public, max-age=3600'
+  res['Cache-Control'] = 'public, max-age=86400'
   res.body = body || ''
 end
 
@@ -92,4 +113,5 @@ end
 trap('INT') { server.shutdown }
 puts "Server running on http://localhost:8080"
 puts "Open http://localhost:8080/reel_generator.html"
+puts "Image cache: #{CACHE_DIR}"
 server.start

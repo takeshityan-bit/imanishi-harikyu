@@ -644,6 +644,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top;
       display: block;
     }
 
@@ -742,7 +743,12 @@
       .lecture-card-inner {
         grid-template-columns: 1fr;
       }
-      .lecture-flyer { max-height: 260px; }
+      .lecture-flyer { height: auto; }
+      .lecture-flyer-img {
+        height: auto;
+        object-fit: contain;
+        object-position: top;
+      }
       .lecture-content { padding: 24px 20px; }
     }
 

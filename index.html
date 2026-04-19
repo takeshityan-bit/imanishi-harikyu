@@ -617,6 +617,136 @@
     .menu-name { font-family: 'Noto Serif JP', serif; font-size: 0.9rem; font-weight: 700; color: var(--primary); line-height: 1.4; }
 
     /* =====================
+       LECTURE セクション
+    ===================== */
+    .lecture-section { padding-top: 80px; padding-bottom: 80px; }
+
+    .lecture-card { max-width: 900px; margin: 0 auto; }
+
+    .lecture-card-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 4px 28px rgba(28,48,40,0.08);
+    }
+
+    /* 左：チラシ画像 */
+    .lecture-flyer {
+      position: relative;
+      overflow: hidden;
+      background: #f0ece6;
+    }
+    .lecture-flyer-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* 右：テキストコンテンツ */
+    .lecture-content {
+      padding: 32px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .lecture-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 4px 14px;
+      border-radius: var(--radius-pill);
+      background: var(--accent);
+      color: var(--white);
+      align-self: flex-start;
+      margin-bottom: 12px;
+    }
+    .lecture-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    .lecture-details {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .lecture-detail-row {
+      display: flex;
+      gap: 10px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+    .lecture-detail-row dt {
+      font-weight: 700;
+      color: var(--secondary);
+      white-space: nowrap;
+      min-width: 2.5em;
+    }
+    .lecture-detail-row dd { color: var(--text); }
+
+    .lecture-body {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 18px;
+    }
+    .lecture-date-block { margin-bottom: 4px; }
+    .lecture-date {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+    .lecture-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary);
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+    .lecture-desc {
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .lecture-blog { margin-top: auto; }
+    .lecture-blog-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .lecture-blog-link {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--secondary);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 1px;
+      transition: color .2s, border-color .2s;
+    }
+    .lecture-blog-link:hover { color: var(--accent); border-color: var(--gold); }
+
+    @media (max-width: 700px) {
+      .lecture-card-inner {
+        grid-template-columns: 1fr;
+      }
+      .lecture-flyer { max-height: 260px; }
+      .lecture-content { padding: 24px 20px; }
+    }
+
+    /* =====================
        ★ 継続通院のメリット セクション
     ===================== */
     .merit-section {
@@ -1411,6 +1541,55 @@
         <h3>続けやすさを、<br>料金にも込めました。</h3>
         <p>週1回通われる方は、月1回の方より1回あたり3,000円お得に。<br>「続けたい」という気持ちに、料金面でもお応えしたい——<br>そんな想いで通院ペースに応じた料金設計にしています。</p>
         <a href="#price" class="merit-bridge-link">料金を見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       LECTURE
+  ===================== -->
+  <section class="section lecture-section" id="lecture" style="background:var(--white);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Lecture</span>
+        <h2 class="section-title">講演実績</h2>
+      </div>
+
+      <div class="lecture-card fade-in">
+        <div class="lecture-card-inner">
+          <div class="lecture-flyer">
+            <img src="images/seminar-flyer.jpg" alt="保護者・指導者向けスポーツセミナーのチラシ" class="lecture-flyer-img">
+          </div>
+          <div class="lecture-content">
+            <span class="lecture-tag">講演実績</span>
+            <h3 class="lecture-heading">保護者・指導者向け<br>スポーツセミナー</h3>
+            <dl class="lecture-details">
+              <div class="lecture-detail-row">
+                <dt>会場</dt>
+                <dd>八尾市立総合体育館 2階 会議室</dd>
+              </div>
+              <div class="lecture-detail-row">
+                <dt>時間</dt>
+                <dd>19:00〜20:30</dd>
+              </div>
+              <div class="lecture-detail-row">
+                <dt>定員</dt>
+                <dd>20名（こども同伴可・質問OK）</dd>
+              </div>
+            </dl>
+            <div class="lecture-body">
+              <div class="lecture-date-block">
+                <span class="lecture-date">3/25（水）</span>
+              </div>
+              <p class="lecture-title">鍼灸師が教える！運動を続けるためのケガ予防と回復力</p>
+              <p class="lecture-desc">ケガの予防ポイントと「痛めた時の初動・回復を早めるセルフケア」を鍼灸師の視点で解説。無理なく続けるための負荷の調整法や睡眠・栄養なども具体的にお伝えしました。</p>
+            </div>
+            <div class="lecture-blog">
+              <p class="lecture-blog-desc">セミナー参加者の方がブログに感想を書いてくださいました。</p>
+              <a class="lecture-blog-link" href="https://ameblo.jp/gangan19/entry-12960925273.html" target="_blank" rel="noopener noreferrer">感想記事を読む →</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

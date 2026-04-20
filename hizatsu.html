@@ -32,6 +32,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"変形性膝関節症と言われました。鍼灸で変化はありますか？","acceptedAnswer":{"@type":"Answer","text":"関節の変形そのものを元に戻すことはできませんが、周辺の筋肉・姿勢・歩き方を整えることで、痛みを軽減できる余地は大きいです。手術を避けたい方にもご相談いただいています。"}},
+      {"@type":"Question","name":"水が溜まっていますが受けても大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"まず整形外科で確認をおすすめします。炎症が落ち着いた段階で、鍼灸を併用される方が多くいらっしゃいます。"}},
+      {"@type":"Question","name":"歩くと痛いのですが施術を受けられますか？","acceptedAnswer":{"@type":"Answer","text":"はい、可能です。負担をかけすぎない範囲で整えますのでご安心ください。ご来院時の移動が難しい場合はご相談ください。"}},
+      {"@type":"Question","name":"スポーツを続けながら通えますか？","acceptedAnswer":{"@type":"Answer","text":"多くの方が競技を続けながら通っています。試合や練習の時期に合わせて施術のペースを調整します。"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "膝痛の鍼灸治療",
     "description": "膝が痛い・曲げられない・階段がつらい方へ。鍼灸・整体・運動療法で根本からアプローチ。",
@@ -296,6 +308,40 @@
 
     .check-icon { color: var(--accent); font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
     .check-note { font-size: 0.88rem; color: var(--muted); line-height: 1.9; margin-top: 8px; }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 18px 22px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      list-style: none;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 22px 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
 
     /* ===== PULL QUOTE ===== */
     .pull-quote {
@@ -745,6 +791,32 @@
       <ul class="note-list">
         <li><a href="https://note.com/takeshityan/n/n6ad682c08111" target="_blank" rel="noopener">1日10分でも変わる「健康効果の高い簡単運動」3選</a></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" style="background: var(--white); padding-top: 60px; padding-bottom: 60px;">
+  <div class="container fade-in">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">よくあるご質問</h2>
+    <div style="margin-top:24px;">
+      <details class="faq-item" open>
+        <summary>変形性膝関節症と言われました。鍼灸で変化はありますか？</summary>
+        <p>関節の変形そのものを元に戻すことはできませんが、周辺の筋肉・姿勢・歩き方を整えることで、痛みを軽減できる余地は大きいです。手術を避けたい方にもご相談いただいています。</p>
+      </details>
+      <details class="faq-item">
+        <summary>水が溜まっていますが受けても大丈夫ですか？</summary>
+        <p>まず整形外科で確認をおすすめします。炎症が落ち着いた段階で、鍼灸を併用される方が多くいらっしゃいます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>歩くと痛いのですが施術を受けられますか？</summary>
+        <p>はい、可能です。負担をかけすぎない範囲で整えますのでご安心ください。ご来院時の移動が難しい場合はご相談ください。</p>
+      </details>
+      <details class="faq-item">
+        <summary>スポーツを続けながら通えますか？</summary>
+        <p>多くの方が競技を続けながら通っています。試合や練習の時期に合わせて施術のペースを調整します。</p>
+      </details>
     </div>
   </div>
 </section>

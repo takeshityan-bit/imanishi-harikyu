@@ -32,6 +32,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"試合前でも受けられますか？","acceptedAnswer":{"@type":"Answer","text":"受けられます。試合までの期間を踏まえ、身体に負担をかけすぎない刺激量で施術を選びます。"}},
+      {"@type":"Question","name":"練習を休まないと治りませんか？","acceptedAnswer":{"@type":"Answer","text":"必ずしも完全に休む必要はありません。症状の強さと競技の時期を見ながら、続けながら整える方法を一緒に考えます。"}},
+      {"@type":"Question","name":"フォームや身体の使い方も相談できますか？","acceptedAnswer":{"@type":"Answer","text":"運動指導を学んできた経験を活かし、身体の使い方や動きのクセ、負担のかかり方についてお伝えしています。"}},
+      {"@type":"Question","name":"保険は使えますか？","acceptedAnswer":{"@type":"Answer","text":"当院の鍼灸は自費診療となります。詳細は料金欄をご覧ください。"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "スポーツ障害の鍼灸治療",
     "description": "シンスプリント・テニス肘など、休んでも繰り返すスポーツ障害に対し、患部だけでなく全身から原因を探します。",
@@ -524,6 +536,41 @@
       line-height: 1.8;
     }
 
+    .faq-section { background: var(--light); }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid #e0ece4;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 18px 22px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      list-style: none;
+      color: var(--main);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 22px 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
     /* ===== CTA SECTION ===== */
     .cta-section {
       background: linear-gradient(135deg, #1a3a28, #3d6b4f);
@@ -994,6 +1041,30 @@
           <strong>2週間ほどセルフケアを続けても変化が乏しい場合は、一度きちんと全身をみておくことをおすすめします。</strong>
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container fade-in">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">よくあるご質問</h2>
+      <details class="faq-item" open>
+        <summary>試合前でも受けられますか？</summary>
+        <p>受けられます。試合までの期間を踏まえ、身体に負担をかけすぎない刺激量で施術を選びます。大事な試合前はお気軽にご相談ください。</p>
+      </details>
+      <details class="faq-item">
+        <summary>練習を休まないと治りませんか？</summary>
+        <p>必ずしも完全に休む必要はありません。症状の強さと競技の時期を見ながら、続けながら整える方法を一緒に考えます。無理をせず整えることで、かえって回復が早まることも多いです。</p>
+      </details>
+      <details class="faq-item">
+        <summary>フォームや身体の使い方も相談できますか？</summary>
+        <p>運動指導を学んできた経験を活かし、身体の使い方や動きのクセ、負担のかかり方についてお伝えしています。必要であれば、セルフケアのご提案もします。</p>
+      </details>
+      <details class="faq-item">
+        <summary>保険は使えますか？</summary>
+        <p>当院の鍼灸は自費診療となります。料金については下記「料金のご案内」をご確認ください。</p>
+      </details>
     </div>
   </section>
 

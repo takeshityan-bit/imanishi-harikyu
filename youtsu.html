@@ -32,6 +32,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"ぎっくり腰でも受けられますか？","acceptedAnswer":{"@type":"Answer","text":"はい、受けられます。動くのがつらい急性期ほど、無理のない範囲で整えることで回復が早まることがあります。ご予約時に状態をお伝えください。"}},
+      {"@type":"Question","name":"整形外科で異常なしと言われたのに痛みが続きます","acceptedAnswer":{"@type":"Answer","text":"よくあるご相談です。画像に映らない筋肉・関節・姿勢・自律神経・生活習慣などの要因を整理しながら、痛みの背景を一緒に探します。"}},
+      {"@type":"Question","name":"ヘルニアと診断されていますが通えますか？","acceptedAnswer":{"@type":"Answer","text":"可能です。手術の適応でない限り、保存療法として鍼灸を選ばれる方も多くいらっしゃいます。医療機関との併用でご相談ください。"}},
+      {"@type":"Question","name":"どれくらいで楽になりますか？","acceptedAnswer":{"@type":"Answer","text":"症状の強さや経過年数により変わります。つらい時期は間隔を詰めて、落ち着いてから広げていくのが基本です。"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "慢性腰痛の鍼灸治療",
     "description": "病院・整体・マッサージに通っても改善しない慢性腰痛。原因は「腰」だけではないかもしれません。",
@@ -436,6 +448,41 @@
 
     .price-table tr:last-child td { border-bottom: none; }
     .price-table tr:nth-child(even) td { background: #f8fcf9; }
+
+    .faq-section { background: var(--light); }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid #e0ece4;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 18px 22px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      list-style: none;
+      color: var(--main);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 22px 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
 
     .price-note {
       font-size: 0.82rem;
@@ -844,6 +891,30 @@
 
       </div>
       <p style="font-size:0.78rem; color:var(--muted); margin-top:16px;">※ 掲載論文はすべて第三者機関の学術誌に掲載されたものです。当院が作成したものではありません。効果には個人差があります。</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container fade-in">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">よくあるご質問</h2>
+      <details class="faq-item" open>
+        <summary>ぎっくり腰でも受けられますか？</summary>
+        <p>はい、受けられます。動くのがつらい急性期ほど、無理のない範囲で整えることで回復が早まることがあります。ご予約時に状態をお伝えください。</p>
+      </details>
+      <details class="faq-item">
+        <summary>整形外科で異常なしと言われたのに痛みが続きます</summary>
+        <p>よくあるご相談です。画像に映らない筋肉・関節・姿勢・自律神経・生活習慣などの要因を整理しながら、痛みの背景を一緒に探します。</p>
+      </details>
+      <details class="faq-item">
+        <summary>ヘルニアと診断されていますが通えますか？</summary>
+        <p>可能です。手術の適応でない限り、保存療法として鍼灸を選ばれる方も多くいらっしゃいます。医療機関での治療を大切にしながら、併用してご相談ください。</p>
+      </details>
+      <details class="faq-item">
+        <summary>どれくらい通えば楽になりますか？</summary>
+        <p>症状の強さや経過年数により変わります。つらい時期は間隔を詰めて、落ち着いてから広げていくのが基本です。初診時に一緒に計画を立てます。</p>
+      </details>
     </div>
   </section>
 

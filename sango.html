@@ -32,6 +32,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"産後いつから通えますか？","acceptedAnswer":{"@type":"Answer","text":"一般的には1ヶ月健診で問題がなければ可能です。それより前でも、体調や症状に応じて無理のない範囲でご相談ください。"}},
+      {"@type":"Question","name":"お子さま連れでの来院は可能ですか？","acceptedAnswer":{"@type":"Answer","text":"当院はひとり院のため、施術中にお子さまを見守ることが難しく、ご家族などに預けてのご来院をお願いしております。"}},
+      {"@type":"Question","name":"骨盤矯正と鍼灸はどう違いますか？","acceptedAnswer":{"@type":"Answer","text":"骨盤だけではなく、背骨・股関節・足部の連動、自律神経や栄養状態まで含めて整える点が異なります。"}},
+      {"@type":"Question","name":"授乳中でも鍼灸は受けられますか？","acceptedAnswer":{"@type":"Answer","text":"はい。授乳期の身体に合わせて刺激量を調整しますので、ご安心ください。"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "産後の不調の鍼灸治療",
     "description": "産後の腰痛・骨盤の違和感・気分の落ち込み・授乳期の疲労感などを、全身から整える鍼灸治療。",
@@ -455,6 +467,41 @@
     .price-table tr:nth-child(even) td { background: #f8fcf9; }
 
     .price-note { font-size: 0.82rem; color: var(--muted); margin-top: 16px; line-height: 1.8; }
+
+    .faq-section { background: var(--light); }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid #e0ece4;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 18px 22px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      list-style: none;
+      color: var(--main);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 22px 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
 
     .cta-section {
       background: linear-gradient(135deg, #1a3a28, #3d6b4f);
@@ -893,6 +940,30 @@
         ※3ヶ月以上間隔が空いた方は、再診料として1,500円を頂戴しております。
       </p>
 
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container fade-in">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">よくあるご質問</h2>
+      <details class="faq-item" open>
+        <summary>産後いつから通えますか？</summary>
+        <p>一般的には1ヶ月健診で問題がなければ可能です。それより前でも、体調や症状に応じて無理のない範囲でご相談ください。</p>
+      </details>
+      <details class="faq-item">
+        <summary>お子さま連れでの来院は可能ですか？</summary>
+        <p>当院はひとり院のため、施術中にお子さまを見守ることが難しく、ご家族などに預けてのご来院をお願いしております。</p>
+      </details>
+      <details class="faq-item">
+        <summary>骨盤矯正と鍼灸はどう違いますか？</summary>
+        <p>骨盤だけではなく、背骨・股関節・足部の連動、自律神経や栄養状態まで含めて整える点が異なります。一時的に整えるのではなく、戻りにくい身体づくりを大切にしています。</p>
+      </details>
+      <details class="faq-item">
+        <summary>授乳中でも鍼灸は受けられますか？</summary>
+        <p>はい。授乳期の身体に合わせて刺激量を調整しますのでご安心ください。服用中のお薬がある場合はお伝えください。</p>
+      </details>
     </div>
   </section>
 

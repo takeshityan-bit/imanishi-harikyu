@@ -32,6 +32,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"病院で自律神経失調症と言われましたが、鍼灸で変化はありますか？","acceptedAnswer":{"@type":"Answer","text":"鍼灸は自律神経のバランスに働きかけることが国内外の研究でも報告されています。医療機関での治療と併用して整えていく方が多くいらっしゃいます。"}},
+      {"@type":"Question","name":"薬を飲んでいても受けられますか？","acceptedAnswer":{"@type":"Answer","text":"はい、受けられます。服用中のお薬や通院状況をお聞きした上で、無理のない範囲で施術を行います。自己判断での減薬・中止はおすすめしていません。"}},
+      {"@type":"Question","name":"どれくらい通えば楽になりますか？","acceptedAnswer":{"@type":"Answer","text":"自律神経の乱れは生活の積み重ねで起こっていることが多いため、数回で劇的に変わるというより、少しずつ整えていく流れが一般的です。つらい時期は間隔を詰め、落ち着いてから広げていきます。"}},
+      {"@type":"Question","name":"鍼が苦手でも受けられますか？","acceptedAnswer":{"@type":"Answer","text":"刺激量は細かく調整できます。不安な方には刺さない鍼（てい鍼）もご用意していますので、遠慮なくお伝えください。"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "自律神経の鍼灸治療",
     "description": "眠れない・疲れが抜けない・呼吸が浅い・胃腸が乱れやすい方へ。八尾市の鍼灸院が自律神経を整えます。",
@@ -329,6 +341,40 @@
       color: var(--muted);
       line-height: 1.9;
       margin-top: 8px;
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 18px 22px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      list-style: none;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 22px 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
     }
 
     /* ===== PULL QUOTE ===== */
@@ -1034,6 +1080,32 @@
         <li><a href="https://note.com/takeshityan/n/n20a305502ed4" target="_blank" rel="noopener">便秘は「腸」だけの問題ではありません</a></li>
         <li><a href="https://note.com/takeshityan/n/nbe0a91313b53" target="_blank" rel="noopener">呼吸を制する者は人生を制す</a></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" style="background: var(--white); padding-top: 60px; padding-bottom: 60px;">
+  <div class="container fade-in">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">よくあるご質問</h2>
+    <div style="margin-top:24px;">
+      <details class="faq-item" open>
+        <summary>病院で自律神経失調症と言われましたが、鍼灸で変化はありますか？</summary>
+        <p>鍼灸は自律神経のバランスに働きかけることが国内外の研究でも報告されています。医療機関での治療と併用して整えていく方が多くいらっしゃいます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>薬を飲んでいても受けられますか？</summary>
+        <p>はい、受けられます。服用中のお薬や通院状況をお聞きした上で、無理のない範囲で施術を行います。自己判断での減薬・中止はおすすめしていません。</p>
+      </details>
+      <details class="faq-item">
+        <summary>どれくらい通えば楽になりますか？</summary>
+        <p>自律神経の乱れは生活の積み重ねで起こっていることが多いため、数回で劇的に変わるというより、少しずつ整えていく流れが一般的です。つらい時期は間隔を詰め、落ち着いてから広げていきます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>鍼が苦手でも受けられますか？</summary>
+        <p>刺激量は細かく調整できます。不安な方には刺さない鍼（てい鍼）もご用意していますので、遠慮なくお伝えください。</p>
+      </details>
     </div>
   </div>
 </section>

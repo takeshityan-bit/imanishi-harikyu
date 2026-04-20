@@ -32,6 +32,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"睡眠薬を飲んでいても受けられますか？","acceptedAnswer":{"@type":"Answer","text":"はい、受けられます。急な減薬・中止はおすすめしていません。まずは眠れる状態を整えるところから始め、必要に応じて医療機関と併用しながら進めます。"}},
+      {"@type":"Question","name":"寝つきが悪いのと夜中に目が覚めるのとでは違いますか？","acceptedAnswer":{"@type":"Answer","text":"背景にある身体の状態が異なることが多いため、問診で丁寧にお聞きした上で、どこを整えるかを一緒に考えます。"}},
+      {"@type":"Question","name":"どれくらいで効果が出ますか？","acceptedAnswer":{"@type":"Answer","text":"個人差があります。数回で楽になる方もいれば、生活リズムや栄養を整えながら少しずつ変化していく方もいらっしゃいます。初診時に一緒に通院計画を立てます。"}},
+      {"@type":"Question","name":"病院では異常なしと言われました","acceptedAnswer":{"@type":"Answer","text":"よくあるご相談です。画像検査や血液検査では捉えにくい、自律神経・栄養・生活リズムの部分から整理していきます。"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "不眠の鍼灸治療",
     "description": "睡眠薬やお酒がないと眠れない・夜中に目が覚める方へ。鍼灸・自律神経アプローチで根本から整えます。",
@@ -283,6 +295,40 @@
 
     .check-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
     .check-note { font-size: 0.88rem; color: var(--muted); line-height: 1.9; margin-top: 8px; }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 18px 22px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      list-style: none;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 22px 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
 
     /* ===== PULL QUOTE ===== */
     .pull-quote {
@@ -922,6 +968,32 @@
           <a href="https://pubmed.ncbi.nlm.nih.gov/21251644/" target="_blank" rel="noopener" class="paper-link">PubMed で確認 →</a>
         </li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" style="background: var(--white); padding-top: 60px; padding-bottom: 60px;">
+  <div class="container fade-in">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">よくあるご質問</h2>
+    <div style="margin-top:24px;">
+      <details class="faq-item" open>
+        <summary>睡眠薬を飲んでいても受けられますか？</summary>
+        <p>はい、受けられます。急な減薬・中止はおすすめしていません。まずは眠れる状態を整えるところから始め、必要に応じて医療機関と併用しながら進めます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>寝つきが悪いのと夜中に目が覚めるのとでは違いますか？</summary>
+        <p>背景にある身体の状態が異なることが多いため、問診で丁寧にお聞きした上で、どこを整えるかを一緒に考えます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>どれくらいで効果が出ますか？</summary>
+        <p>個人差があります。数回で楽になる方もいれば、生活リズムや栄養を整えながら少しずつ変化していく方もいらっしゃいます。初診時に一緒に通院計画を立てます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>病院では異常なしと言われました</summary>
+        <p>よくあるご相談です。画像検査や血液検査では捉えにくい、自律神経・栄養・生活リズムの部分から整理していきます。</p>
+      </details>
     </div>
   </div>
 </section>

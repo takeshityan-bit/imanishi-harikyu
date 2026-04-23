@@ -43,12 +43,24 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["MedicalBusiness", "LocalBusiness"],
+    "@id": "https://takeshityan-bit.github.io/imanishi-harikyu/#clinic",
     "name": "今西健はり・灸院",
-    "description": "東洋医学・鍼灸・運動療法・分子栄養学を組み合わせた根本アプローチの鍼灸院。",
+    "alternateName": "いまにしたけしはり・きゅういん",
+    "description": "大阪府八尾市堤町の鍼灸院。鍼灸・カイロプラクティック・運動療法・分子栄養学を組み合わせ、腰痛・頭痛・自律神経・産後・スポーツ障害・美容鍼など幅広い不調に対応。",
     "url": "https://takeshityan-bit.github.io/imanishi-harikyu/",
-    "telephone": "072-998-7474",
+    "telephone": "+81-72-998-7474",
+    "priceRange": "¥5,000-¥12,000",
     "image": "https://takeshityan-bit.github.io/imanishi-harikyu/images/portrait.jpg",
+    "logo": "https://takeshityan-bit.github.io/imanishi-harikyu/images/portrait.jpg",
+    "medicalSpecialty": ["Acupuncture", "PhysicalTherapy"],
+    "availableService": [
+      {"@type": "MedicalTherapy", "name": "鍼灸治療"},
+      {"@type": "MedicalTherapy", "name": "カイロプラクティック"},
+      {"@type": "MedicalTherapy", "name": "運動療法"},
+      {"@type": "MedicalTherapy", "name": "分子栄養学カウンセリング"},
+      {"@type": "MedicalTherapy", "name": "美容鍼"}
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "堤町2-30-59",
@@ -57,6 +69,13 @@
       "postalCode": "581-0832",
       "addressCountry": "JP"
     },
+    "areaServed": [
+      {"@type": "City", "name": "八尾市"},
+      {"@type": "City", "name": "柏原市"},
+      {"@type": "City", "name": "東大阪市"},
+      {"@type": "City", "name": "藤井寺市"},
+      {"@type": "City", "name": "松原市"}
+    ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -66,10 +85,54 @@
       },
       {
         "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Thursday",
+        "opens": "09:30",
+        "closes": "12:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Saturday",
         "opens": "09:00",
         "closes": "16:00"
       }
+    ],
+    "sameAs": [
+      "https://note.com/takeshityan"
+    ],
+    "founder": {"@id": "https://takeshityan-bit.github.io/imanishi-harikyu/#imanishi"},
+    "employee": {"@id": "https://takeshityan-bit.github.io/imanishi-harikyu/#imanishi"}
+  }
+  </script>
+
+  <!-- JSON-LD: Physician (院長) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Physician", "Person"],
+    "@id": "https://takeshityan-bit.github.io/imanishi-harikyu/#imanishi",
+    "name": "今西 健",
+    "alternateName": "いまにし たけし",
+    "jobTitle": "院長",
+    "description": "鍼灸師・柔道整復師の国家資格を保有。東洋医学・鍼灸・カイロプラクティック・運動療法・分子栄養学を組み合わせて、慢性的な不調や再発しやすい症状の根本アプローチを行う。",
+    "image": "https://takeshityan-bit.github.io/imanishi-harikyu/images/portrait.jpg",
+    "url": "https://takeshityan-bit.github.io/imanishi-harikyu/",
+    "hasCredential": [
+      {"@type": "EducationalOccupationalCredential", "credentialCategory": "National License", "name": "鍼灸師（はり師・きゅう師）"},
+      {"@type": "EducationalOccupationalCredential", "credentialCategory": "National License", "name": "柔道整復師"}
+    ],
+    "knowsAbout": ["東洋医学", "鍼灸", "カイロプラクティック", "運動療法", "分子栄養学"],
+    "worksFor": {"@id": "https://takeshityan-bit.github.io/imanishi-harikyu/#clinic"},
+    "sameAs": ["https://note.com/takeshityan"]
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://takeshityan-bit.github.io/imanishi-harikyu/"}
     ]
   }
   </script>

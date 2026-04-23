@@ -44,23 +44,22 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": ["WebPage", "MedicalWebPage"],
     "name": "自律神経の鍼灸治療",
     "description": "眠れない・疲れが抜けない・呼吸が浅い・胃腸が乱れやすい方へ。八尾市の鍼灸院が自律神経を整えます。",
     "url": "https://takeshityan-bit.github.io/imanishi-harikyu/jiritsushinkei.html",
-    "isPartOf": {
-      "@type": "LocalBusiness",
-      "name": "今西健はり・灸院",
-      "telephone": "072-998-7474",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "堤町2-30-59",
-        "addressLocality": "八尾市",
-        "addressRegion": "大阪府",
-        "postalCode": "581-0832",
-        "addressCountry": "JP"
-      }
-    }
+    "about": {"@type": "MedicalCondition", "name": "自律神経失調", "alternateName": "Autonomic Nervous System Dysregulation"},
+    "isPartOf": {"@id": "https://takeshityan-bit.github.io/imanishi-harikyu/#clinic"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://takeshityan-bit.github.io/imanishi-harikyu/"},
+      {"@type": "ListItem", "position": 2, "name": "自律神経", "item": "https://takeshityan-bit.github.io/imanishi-harikyu/jiritsushinkei.html"}
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">

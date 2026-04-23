@@ -44,23 +44,22 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": ["WebPage", "MedicalWebPage"],
     "name": "不眠の鍼灸治療",
     "description": "睡眠薬やお酒がないと眠れない・夜中に目が覚める方へ。鍼灸・自律神経アプローチで根本から整えます。",
     "url": "https://takeshityan-bit.github.io/imanishi-harikyu/fumin.html",
-    "isPartOf": {
-      "@type": "LocalBusiness",
-      "name": "今西健はり・灸院",
-      "telephone": "072-998-7474",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "堤町2-30-59",
-        "addressLocality": "八尾市",
-        "addressRegion": "大阪府",
-        "postalCode": "581-0832",
-        "addressCountry": "JP"
-      }
-    }
+    "about": {"@type": "MedicalCondition", "name": "不眠症", "alternateName": "Insomnia"},
+    "isPartOf": {"@id": "https://takeshityan-bit.github.io/imanishi-harikyu/#clinic"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://takeshityan-bit.github.io/imanishi-harikyu/"},
+      {"@type": "ListItem", "position": 2, "name": "不眠", "item": "https://takeshityan-bit.github.io/imanishi-harikyu/fumin.html"}
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">

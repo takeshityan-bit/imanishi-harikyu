@@ -383,7 +383,7 @@
     }
     .hero-bg {
       position: absolute; inset: 0;
-      background-image: url('images/exterior.jpg');
+      background-image: image-set(url('images/exterior.webp') type('image/webp'), url('images/exterior.jpg') type('image/jpeg'));
       background-size: cover; background-position: center;
       transform: scale(1.05); transition: transform 8s var(--ease);
     }
@@ -1918,10 +1918,16 @@
     <div class="container">
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="images/interior.jpg" alt="今西健はり・灸院 施術室(大阪府八尾市)" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="images/interior.webp" type="image/webp">
+            <img src="images/interior.jpg" alt="今西健はり・灸院 施術室(大阪府八尾市)" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="gallery-item">
-          <img src="images/flowers.jpg" alt="院内の花" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="images/flowers.webp" type="image/webp">
+            <img src="images/flowers.jpg" alt="院内の花" loading="lazy" decoding="async">
+          </picture>
         </div>
       </div>
     </div>

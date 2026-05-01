@@ -327,6 +327,25 @@
     .header-nav a:hover { background-color: rgba(255,255,255,0.15); }
     .header.scrolled .header-nav a:hover { background-color: rgba(28,48,40,0.08); color: var(--primary); }
 
+    /* ドロップダウン */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a::after { content: ' ▾'; font-size: 0.65rem; opacity: 0.7; }
+    .nav-dropdown-menu {
+      display: none; position: absolute; top: calc(100% + 6px); left: 50%;
+      transform: translateX(-50%);
+      background: var(--white); border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(28,48,40,0.15);
+      padding: 8px 0; min-width: 180px; z-index: 200;
+    }
+    .nav-dropdown-menu a {
+      display: block; padding: 9px 20px; font-size: 0.82rem;
+      color: var(--text) !important; background: none !important;
+      border-radius: 0; white-space: nowrap;
+      transition: background 0.15s;
+    }
+    .nav-dropdown-menu a:hover { background: rgba(28,48,40,0.06) !important; color: var(--primary) !important; }
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+
     /* ★ 改善①: ヘッダーのCTAをLINEに統一して目立たせる */
     .header-cta .btn-header {
       display: inline-flex; align-items: center; gap: 8px;
@@ -1415,9 +1434,23 @@
     <div class="header-inner">
       <a href="#" class="header-logo">今西健はり・灸院</a>
       <nav class="header-nav">
+        <div class="nav-dropdown">
+          <a href="#menu">症状別</a>
+          <div class="nav-dropdown-menu">
+            <a href="youtsu.html">腰痛・椎間板ヘルニア</a>
+            <a href="zutsuu.html">肩こり・頭痛・頸部痛</a>
+            <a href="hizatsu.html">膝痛</a>
+            <a href="jiritsushinkei.html">自律神経の乱れ</a>
+            <a href="fumin.html">不眠・疲労感</a>
+            <a href="biyoshin.html">美容鍼</a>
+            <a href="sports.html">スポーツ障害</a>
+            <a href="sango.html">産後の不調</a>
+            <a href="ketsuatsu.html">高血圧ケア</a>
+            <a href="gojukata.html">四十肩・五十肩</a>
+          </div>
+        </div>
+        <a href="first-visit.html">はじめての方へ</a>
         <a href="#about">院長について</a>
-        <a href="#features">当院の特徴</a>
-        <a href="#merit">継続通院</a>
         <a href="#price">料金</a>
         <a href="column.html">コラム</a>
         <a href="#info">アクセス</a>
@@ -1438,13 +1471,22 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="閉じる">&times;</button>
+    <a href="first-visit.html" onclick="closeMobileMenu()">はじめての方へ</a>
     <a href="#about" onclick="closeMobileMenu()">院長について</a>
-    <a href="#features" onclick="closeMobileMenu()">当院の特徴</a>
-    <a href="#merit" onclick="closeMobileMenu()">継続通院のメリット</a>
     <a href="#price" onclick="closeMobileMenu()">料金</a>
-    <a href="column.html">コラム</a>
-    <a href="#faq" onclick="closeMobileMenu()">よくある質問</a>
+    <a href="column.html" onclick="closeMobileMenu()">コラム</a>
     <a href="#info" onclick="closeMobileMenu()">アクセス</a>
+    <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);padding:8px 0 4px;letter-spacing:0.05em;">── 症状別ページ ──</div>
+    <a href="youtsu.html" onclick="closeMobileMenu()">腰痛・椎間板ヘルニア</a>
+    <a href="zutsuu.html" onclick="closeMobileMenu()">肩こり・頭痛</a>
+    <a href="hizatsu.html" onclick="closeMobileMenu()">膝痛</a>
+    <a href="jiritsushinkei.html" onclick="closeMobileMenu()">自律神経の乱れ</a>
+    <a href="fumin.html" onclick="closeMobileMenu()">不眠・疲労感</a>
+    <a href="biyoshin.html" onclick="closeMobileMenu()">美容鍼</a>
+    <a href="sports.html" onclick="closeMobileMenu()">スポーツ障害</a>
+    <a href="sango.html" onclick="closeMobileMenu()">産後の不調</a>
+    <a href="ketsuatsu.html" onclick="closeMobileMenu()">高血圧ケア</a>
+    <a href="gojukata.html" onclick="closeMobileMenu()">四十肩・五十肩</a>
     <a href="https://line.me/ti/p/takeshityan" class="mobile-menu-line" target="_blank" rel="noopener" style="margin-top:8px;">
       LINEで予約する
     </a>

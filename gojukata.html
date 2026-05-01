@@ -124,6 +124,16 @@
       letter-spacing: 0.06em;
     }
 
+        .header-nav-lp {
+      display: flex; gap: 4px; align-items: center;
+    }
+    .header-nav-lp a {
+      font-size: 0.78rem; font-weight: 500; padding: 6px 12px;
+      border-radius: 999px; color: #666;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .header-nav-lp a:hover { background: rgba(28,48,40,0.08); color: #1c3028; }
     .header-tel {
       font-size: 0.9rem;
       font-weight: 700;
@@ -856,6 +866,7 @@
 
 <header class="header">
   <a href="index.html" class="header-logo">今西健はり・灸院</a>
+  <nav class="header-nav-lp"><a href="index.html#menu">← 症状一覧</a><a href="first-visit.html">はじめての方へ</a></nav>
   <a href="tel:0729987474" class="header-tel">072-998-7474</a>
 </header>
 

@@ -103,6 +103,14 @@
         "closes": "16:00"
       }
     ],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "34.6268",
+      "longitude": "135.6007"
+    },
+    "hasMap": "https://maps.google.com/?q=今西健はり・灸院+大阪府八尾市堤町2-30-59",
+    "currenciesAccepted": "JPY",
+    "paymentAccepted": "現金",
     "sameAs": [
       "https://note.com/takeshityan"
     ],
@@ -818,6 +826,7 @@
     .menu-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(28,48,40,0.1); border-color: var(--accent); }
     .menu-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
     .menu-name { font-family: 'Noto Serif JP', serif; font-size: 0.9rem; font-weight: 700; color: var(--primary); line-height: 1.4; }
+    .menu-sub { font-size: 0.72rem; color: var(--muted); margin-top: 6px; line-height: 1.5; }
 
     /* =====================
        LECTURE セクション
@@ -1501,8 +1510,8 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-badge">&#127807; 大阪府八尾市堤町の鍼灸院</div>
-      <h1 class="hero-title">体の声を、<br>ちゃんと聞く鍼灸院。</h1>
-      <p class="hero-sub">東洋医学・鍼灸・運動療法・分子栄養学で、根本からアプローチ。<br>初診は約90分。お一人おひとりに丁寧に向き合います。</p>
+      <h1 class="hero-title">検査では異常なし。でもつらい。<br><span style="font-size:0.8em;">その不調を、体全体から一緒に整理します。</span></h1>
+      <p class="hero-sub">東洋医学・鍼灸・運動療法・分子栄養学を組み合わせて、不調の背景を丁寧に見直します。<br>初診は約90分。お一人おひとりに向き合います。</p>
       <!-- ★ 改善: 来院前の不安を先回りで解消する安心チップ -->
       <ul class="hero-reassure">
         <li>鍼が苦手な方は刺さない鍼</li>
@@ -1569,42 +1578,52 @@
         <a href="youtsu.html" class="menu-card fade-in">
           <span class="menu-icon">&#129464;</span>
           <div class="menu-name">腰痛・<br>椎間板ヘルニア</div>
+          <div class="menu-sub">朝の腰のこわばり、<br>座りっぱなしの痛みに</div>
         </a>
         <a href="zutsuu.html" class="menu-card fade-in fade-in-delay-1">
           <span class="menu-icon">&#128564;</span>
           <div class="menu-name">肩こり・<br>頭痛・頸部痛</div>
+          <div class="menu-sub">首肩の重さ、<br>こめかみの頭痛が続く方へ</div>
         </a>
         <a href="hizatsu.html" class="menu-card fade-in fade-in-delay-2">
           <span class="menu-icon">&#129461;</span>
           <div class="menu-name">膝痛</div>
+          <div class="menu-sub">歩くと痛む、<br>階段がつらい方へ</div>
         </a>
         <a href="jiritsushinkei.html" class="menu-card fade-in fade-in-delay-3">
           <span class="menu-icon">&#129488;</span>
           <div class="menu-name">自律神経の乱れ</div>
+          <div class="menu-sub">病院で異常なし。<br>でもしんどい方へ</div>
         </a>
         <a href="fumin.html" class="menu-card fade-in fade-in-delay-1">
           <span class="menu-icon">&#128164;</span>
           <div class="menu-name">不眠・疲労感</div>
+          <div class="menu-sub">寝ても疲れが<br>抜けない方へ</div>
         </a>
         <a href="biyoshin.html" class="menu-card fade-in fade-in-delay-2">
           <span class="menu-icon">&#10024;</span>
           <div class="menu-name">美容鍼</div>
+          <div class="menu-sub">顔のくすみ・<br>ほうれい線が気になる方へ</div>
         </a>
         <a href="sports.html" class="menu-card fade-in fade-in-delay-3">
           <span class="menu-icon">&#9917;</span>
           <div class="menu-name">スポーツ障害</div>
+          <div class="menu-sub">ケガの再発を<br>繰り返している方へ</div>
         </a>
         <a href="sango.html" class="menu-card fade-in fade-in-delay-4" style="transition-delay:0.4s;">
           <span class="menu-icon">&#128118;</span>
           <div class="menu-name">産後の不調</div>
+          <div class="menu-sub">産後の腰痛・骨盤の<br>不安定が続く方へ</div>
         </a>
         <a href="ketsuatsu.html" class="menu-card fade-in fade-in-delay-4" style="transition-delay:0.45s;">
           <span class="menu-icon">&#128138;</span>
           <div class="menu-name">高血圧の<br>補助ケア</div>
+          <div class="menu-sub">薬と並行して生活習慣<br>から整えたい方へ</div>
         </a>
         <a href="gojukata.html" class="menu-card fade-in fade-in-delay-4" style="transition-delay:0.5s;">
           <span class="menu-icon">&#129339;</span>
           <div class="menu-name">四十肩・<br>五十肩</div>
+          <div class="menu-sub">腕が上がらない、<br>夜間痛がある方へ</div>
         </a>
       </div>
     </div>
@@ -1805,13 +1824,13 @@
         </div>
         <div class="merit-card">
           <div class="merit-num">MERIT 02</div>
-          <div class="merit-title">身体が「自分で治る力」を<br>取り戻す</div>
+          <div class="merit-title">身体が「自分で整いやすい状態」<br>を目指す</div>
           <p class="merit-desc">鍼灸・整体・運動療法を重ねるうちに、施術の間隔が自然に空いていきます。それは身体が自分で整えられるようになってきたサインです。</p>
         </div>
         <div class="merit-card">
           <div class="merit-num">MERIT 03</div>
           <div class="merit-title">今の投資が<br>10年後の自分を守る</div>
-          <p class="merit-desc">慢性的な不調を放置するほど、年齢を重ねてからの対処は難しくなります。定期的に整える習慣は「健康貯金」。将来の不調リスクを着実に減らします。</p>
+          <p class="merit-desc">慢性的な不調を放置するほど、年齢を重ねてからの対処は難しくなります。定期的に整える習慣は「健康貯金」。将来の不調に備える体づくりを一緒に支えます。</p>
         </div>
         <div class="merit-card">
           <div class="merit-num">MERIT 04</div>
@@ -1837,7 +1856,7 @@
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-label">Lecture</span>
-        <h2 class="section-title">講演実績</h2>
+        <h2 class="section-title">地域での健康講座・講演実績</h2>
       </div>
 
       <div class="lecture-card fade-in">
@@ -1846,28 +1865,20 @@
             <img src="images/seminar-flyer.jpg" alt="保護者・指導者向けスポーツセミナーのチラシ" class="lecture-flyer-img" loading="lazy" decoding="async">
           </div>
           <div class="lecture-content">
-            <span class="lecture-tag">講演実績</span>
+            <span class="lecture-tag">2026年3月 登壇</span>
             <h3 class="lecture-heading">保護者・指導者向け<br>スポーツセミナー</h3>
-            <dl class="lecture-details">
-              <div class="lecture-detail-row">
-                <dt>会場</dt>
-                <dd>八尾市立総合体育館 2階 会議室</dd>
-              </div>
-              <div class="lecture-detail-row">
-                <dt>時間</dt>
-                <dd>19:00〜20:30</dd>
-              </div>
-              <div class="lecture-detail-row">
-                <dt>定員</dt>
-                <dd>20名（こども同伴可・質問OK）</dd>
-              </div>
-            </dl>
             <div class="lecture-body">
-              <div class="lecture-date-block">
-                <span class="lecture-date">2026年3月25日（水）登壇</span>
-              </div>
-              <p class="lecture-title">鍼灸師が教える！運動を続けるためのケガ予防と回復力</p>
-              <p class="lecture-desc">ケガの予防ポイントと「痛めた時の初動・回復を早めるセルフケア」を鍼灸師の視点で解説。無理なく続けるための負荷の調整法や睡眠・栄養なども具体的にお伝えしました。</p>
+              <p class="lecture-desc">八尾市立総合体育館にて、保護者・指導者向けにケガ予防と回復力についての健康講座を担当しました。「ケガの初動対応」「回復を早めるセルフケア」「負荷の調整法・睡眠・栄養」を鍼灸師の視点で解説。参加者約20名に向けて、90分の講演を行いました。</p>
+              <dl class="lecture-details" style="margin-top:16px;">
+                <div class="lecture-detail-row">
+                  <dt>会場</dt>
+                  <dd>八尾市立総合体育館 2階 会議室</dd>
+                </div>
+                <div class="lecture-detail-row">
+                  <dt>日時</dt>
+                  <dd>2026年3月25日（水）19:00〜20:30</dd>
+                </div>
+              </dl>
             </div>
             <div class="lecture-blog">
               <p class="lecture-blog-desc">セミナー参加者の方がブログに感想を書いてくださいました。</p>
@@ -1875,6 +1886,11 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="fade-in" style="margin-top:32px; background:var(--light); border-radius:16px; padding:28px 32px; text-align:center;">
+        <p style="font-size:0.95rem; color:var(--text); line-height:2;">地域の方に向けた<strong style="color:var(--primary);">健康教室・運動指導・出張講座</strong>のご相談も承っています。<br>
+        スポーツクラブ・保護者会・職場の健康研修などお気軽にご連絡ください。</p>
+        <a href="https://line.me/ti/p/takeshityan" target="_blank" rel="noopener" style="display:inline-block; margin-top:16px; color:var(--secondary); font-weight:700; font-size:0.92rem;">LINEでご相談 →</a>
       </div>
     </div>
   </section>
@@ -2201,7 +2217,7 @@
           <a href="first-visit.html">はじめての方へ</a>
         </nav>
       </div>
-      <p class="footer-copy">&copy; 2024 今西健はり・灸院. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 今西健はり・灸院. All rights reserved.</p>
     </div>
   </footer>
 

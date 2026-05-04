@@ -1289,6 +1289,26 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.08 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // =====================
+    // GA4 キーイベント計測（電話・LINE）
+    // =====================
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'click_tel', {
+          'event_category': 'contact',
+          'event_label': '電話'
+        });
+      });
+    });
+    document.querySelectorAll('a[href*="line.me"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'click_line', {
+          'event_category': 'contact',
+          'event_label': 'LINE'
+        });
+      });
+    });
 </script>
 
 </body>

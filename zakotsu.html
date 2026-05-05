@@ -142,7 +142,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('images/symptoms/hero-zakotsu.png');
+      background-image: url('images/symptoms/hero-zakotsu.webp');
       background-size: cover;
       background-position: center;
       opacity: 0.35;
@@ -605,7 +605,10 @@
   </section>
 
   <figure class="symptom-photo">
-    <img src="images/symptoms/hero-zakotsu.png" width="1672" height="941" alt="坐骨神経痛でお尻から足にかけて痛みやしびれを感じる方のイメージ - 今西健はり・灸院(大阪府八尾市)" loading="eager" decoding="async" fetchpriority="high">
+    <picture>
+      <source srcset="images/symptoms/hero-zakotsu.webp" type="image/webp">
+      <img src="images/symptoms/hero-zakotsu.png" width="1672" height="941" alt="坐骨神経痛でお尻から足にかけて痛みやしびれを感じる方のイメージ - 今西健はり・灸院(大阪府八尾市)" loading="eager" decoding="async" fetchpriority="high">
+    </picture>
   </figure>
 
   <div class="container">
@@ -1028,6 +1031,18 @@
     <p style="text-align:center;"><a href="index.html#menu" style="color:var(--muted);text-decoration:underline;text-underline-offset:3px;">症状一覧へ戻る</a></p>
   </div>
 
+
+  <!-- 関連する症状ページ -->
+  <section style="background:var(--white,#fff);padding:40px 0;">
+    <div style="max-width:860px;margin:0 auto;padding:0 24px;">
+      <p style="font-family:'Noto Serif JP',serif;font-size:0.95rem;font-weight:700;color:#1C3028;margin-bottom:16px;text-align:center;">関連する症状ページ</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <a href="youtsu.html" style="display:inline-block;padding:10px 20px;border:1px solid rgba(28,48,40,0.15);border-radius:8px;font-size:0.88rem;font-weight:700;color:#1C3028;background:#f8f6f2;transition:background 0.2s;">腰痛・椎間板ヘルニア</a>
+        <a href="hizatsu.html" style="display:inline-block;padding:10px 20px;border:1px solid rgba(28,48,40,0.15);border-radius:8px;font-size:0.88rem;font-weight:700;color:#1C3028;background:#f8f6f2;transition:background 0.2s;">膝痛</a>
+        <a href="sports.html" style="display:inline-block;padding:10px 20px;border:1px solid rgba(28,48,40,0.15);border-radius:8px;font-size:0.88rem;font-weight:700;color:#1C3028;background:#f8f6f2;transition:background 0.2s;">スポーツ障害</a>
+      </div>
+    </div>
+  </section>
   <footer>
     <p style="color:rgba(255,255,255,0.9);font-weight:700;margin-bottom:8px;">今西健はり・灸院</p>
     <p>大阪府八尾市堤町2-30-59</p>

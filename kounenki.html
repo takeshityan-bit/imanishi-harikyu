@@ -140,7 +140,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('images/symptoms/hero-kounenki.png');
+      background-image: url('images/symptoms/hero-kounenki.webp');
       background-size: cover;
       background-position: center;
       opacity: 0.35;
@@ -602,7 +602,10 @@
   </section>
 
   <figure class="symptom-photo">
-    <img src="images/symptoms/hero-kounenki.png" width="1672" height="941" alt="更年期の不調でほてりや動悸を感じ、不安そうに胸元へ手を当てる女性のイメージ - 今西健はり・灸院(大阪府八尾市)" loading="eager" decoding="async" fetchpriority="high">
+    <picture>
+      <source srcset="images/symptoms/hero-kounenki.webp" type="image/webp">
+      <img src="images/symptoms/hero-kounenki.png" width="1672" height="941" alt="更年期の不調でほてりや動悸を感じ、不安そうに胸元へ手を当てる女性のイメージ - 今西健はり・灸院(大阪府八尾市)" loading="eager" decoding="async" fetchpriority="high">
+    </picture>
   </figure>
 
   <div class="container">
@@ -1076,6 +1079,18 @@
     </div>
   </section>
 
+
+  <!-- 関連する症状ページ -->
+  <section style="background:var(--white,#fff);padding:40px 0;">
+    <div style="max-width:860px;margin:0 auto;padding:0 24px;">
+      <p style="font-family:'Noto Serif JP',serif;font-size:0.95rem;font-weight:700;color:#1C3028;margin-bottom:16px;text-align:center;">関連する症状ページ</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <a href="jiritsushinkei.html" style="display:inline-block;padding:10px 20px;border:1px solid rgba(28,48,40,0.15);border-radius:8px;font-size:0.88rem;font-weight:700;color:#1C3028;background:#f8f6f2;transition:background 0.2s;">自律神経の乱れ</a>
+        <a href="fumin.html" style="display:inline-block;padding:10px 20px;border:1px solid rgba(28,48,40,0.15);border-radius:8px;font-size:0.88rem;font-weight:700;color:#1C3028;background:#f8f6f2;transition:background 0.2s;">不眠・疲労感</a>
+        <a href="seiritsu.html" style="display:inline-block;padding:10px 20px;border:1px solid rgba(28,48,40,0.15);border-radius:8px;font-size:0.88rem;font-weight:700;color:#1C3028;background:#f8f6f2;transition:background 0.2s;">生理痛・月経痛</a>
+      </div>
+    </div>
+  </section>
   <footer>
     <p style="font-family:'Noto Serif JP',serif;font-weight:700;color:var(--white);font-size:1.05rem;">今西健はり・灸院</p>
     <p>大阪府八尾市堤町2-30-59</p>

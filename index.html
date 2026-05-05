@@ -817,6 +817,28 @@
     /* =====================
        SYMPTOMS
     ===================== */
+    .symptom-category-label {
+      grid-column: 1 / -1;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 20px;
+      margin-bottom: -4px;
+      padding-left: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .symptom-category-label::before {
+      content: '';
+      width: 3px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .symptom-category-label:first-of-type { margin-top: 0; }
     .menu-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .menu-card {
       background-color: var(--white); border: 1px solid var(--border);
@@ -1575,66 +1597,87 @@
         <p class="section-desc">気になる症状をタップすると、原因と当院でのアプローチをご覧いただけます。</p>
       </div>
       <div class="menu-grid">
+        <!-- 痛みのお悩み -->
+        <div class="symptom-category-label fade-in">痛みのお悩み</div>
         <a href="youtsu.html" class="menu-card fade-in">
-          <span class="menu-icon">&#129464;</span>
+          <span class="menu-icon">&#128694;</span>
           <div class="menu-name">腰痛・<br>椎間板ヘルニア</div>
           <div class="menu-sub">朝の腰のこわばり、<br>座りっぱなしの痛みに</div>
         </a>
-        <a href="zutsuu.html" class="menu-card fade-in fade-in-delay-1">
-          <span class="menu-icon">&#128564;</span>
+        <a href="zakotsu.html" class="menu-card fade-in fade-in-delay-1">
+          <span class="menu-icon">&#129461;</span>
+          <div class="menu-name">坐骨神経痛</div>
+          <div class="menu-sub">お尻から足への<br>痛み・しびれに</div>
+        </a>
+        <a href="zutsuu.html" class="menu-card fade-in fade-in-delay-2">
+          <span class="menu-icon">&#128134;</span>
           <div class="menu-name">肩こり・<br>頭痛・頸部痛</div>
           <div class="menu-sub">首肩の重さ、<br>こめかみの頭痛が続く方へ</div>
         </a>
-        <a href="hizatsu.html" class="menu-card fade-in fade-in-delay-2">
+        <a href="hizatsu.html" class="menu-card fade-in fade-in-delay-3">
           <span class="menu-icon">&#129461;</span>
           <div class="menu-name">膝痛</div>
           <div class="menu-sub">歩くと痛む、<br>階段がつらい方へ</div>
         </a>
-        <a href="jiritsushinkei.html" class="menu-card fade-in fade-in-delay-3">
-          <span class="menu-icon">&#129488;</span>
-          <div class="menu-name">自律神経の乱れ</div>
-          <div class="menu-sub">病院で異常なし。<br>でもしんどい方へ</div>
+        <a href="gojukata.html" class="menu-card fade-in fade-in-delay-1">
+          <span class="menu-icon">&#129330;</span>
+          <div class="menu-name">四十肩・<br>五十肩</div>
+          <div class="menu-sub">腕が上がらない、<br>夜間痛がある方へ</div>
         </a>
-        <a href="fumin.html" class="menu-card fade-in fade-in-delay-1">
-          <span class="menu-icon">&#128164;</span>
-          <div class="menu-name">不眠・疲労感</div>
-          <div class="menu-sub">寝ても疲れが<br>抜けない方へ</div>
-        </a>
-        <a href="biyoshin.html" class="menu-card fade-in fade-in-delay-2">
-          <span class="menu-icon">&#10024;</span>
-          <div class="menu-name">美容鍼</div>
-          <div class="menu-sub">顔のくすみ・<br>ほうれい線が気になる方へ</div>
-        </a>
-        <a href="sports.html" class="menu-card fade-in fade-in-delay-3">
+        <a href="sports.html" class="menu-card fade-in fade-in-delay-2">
           <span class="menu-icon">&#9917;</span>
           <div class="menu-name">スポーツ障害</div>
           <div class="menu-sub">ケガの再発を<br>繰り返している方へ</div>
         </a>
-        <a href="sango.html" class="menu-card fade-in fade-in-delay-4" style="transition-delay:0.4s;">
-          <span class="menu-icon">&#128118;</span>
-          <div class="menu-name">産後の不調</div>
-          <div class="menu-sub">産後の腰痛・骨盤の<br>不安定が続く方へ</div>
+
+        <!-- 自律神経・体調のお悩み -->
+        <div class="symptom-category-label fade-in">自律神経・体調のお悩み</div>
+        <a href="jiritsushinkei.html" class="menu-card fade-in">
+          <span class="menu-icon">&#127807;</span>
+          <div class="menu-name">自律神経の乱れ</div>
+          <div class="menu-sub">病院で異常なし。<br>でもしんどい方へ</div>
         </a>
-        <a href="ketsuatsu.html" class="menu-card fade-in fade-in-delay-4" style="transition-delay:0.45s;">
-          <span class="menu-icon">&#128138;</span>
-          <div class="menu-name">高血圧の<br>補助ケア</div>
-          <div class="menu-sub">薬と並行して生活習慣<br>から整えたい方へ</div>
+        <a href="fumin.html" class="menu-card fade-in fade-in-delay-1">
+          <span class="menu-icon">&#127769;</span>
+          <div class="menu-name">不眠・疲労感</div>
+          <div class="menu-sub">寝ても疲れが<br>抜けない方へ</div>
         </a>
-        <a href="gojukata.html" class="menu-card fade-in fade-in-delay-4" style="transition-delay:0.5s;">
-          <span class="menu-icon">&#129339;</span>
-          <div class="menu-name">四十肩・<br>五十肩</div>
-          <div class="menu-sub">腕が上がらない、<br>夜間痛がある方へ</div>
-        </a>
-        <a href="zakotsu.html" class="menu-card fade-in fade-in-delay-4" style="transition-delay:0.55s;">
-          <span class="menu-icon">&#129468;</span>
-          <div class="menu-name">坐骨神経痛</div>
-          <div class="menu-sub">お尻から足への<br>痛み・しびれに</div>
-        </a>
-        <a href="kounenki.html" class="menu-card fade-in fade-in-delay-4" style="transition-delay:0.6s;">
+        <a href="kounenki.html" class="menu-card fade-in fade-in-delay-2">
           <span class="menu-icon">&#127800;</span>
           <div class="menu-name">更年期の不調</div>
           <div class="menu-sub">ほてり・動悸・<br>不眠・疲労感に</div>
         </a>
+        <a href="ketsuatsu.html" class="menu-card fade-in fade-in-delay-3">
+          <span class="menu-icon">&#129657;</span>
+          <div class="menu-name">高血圧の<br>補助ケア</div>
+          <div class="menu-sub">薬と並行して生活習慣<br>から整えたい方へ</div>
+        </a>
+
+        <!-- 女性のお悩み・美容 -->
+        <div class="symptom-category-label fade-in">女性のお悩み・美容</div>
+        <a href="sango.html" class="menu-card fade-in">
+          <span class="menu-icon">&#127800;</span>
+          <div class="menu-name">産後の不調</div>
+          <div class="menu-sub">産後の腰痛・骨盤の<br>不安定が続く方へ</div>
+        </a>
+        <a href="biyoshin.html" class="menu-card fade-in fade-in-delay-1">
+          <span class="menu-icon">&#10024;</span>
+          <div class="menu-name">美容鍼</div>
+          <div class="menu-sub">顔のくすみ・<br>ほうれい線が気になる方へ</div>
+        </a>
+      </div>
+
+      <!-- よくあるご相談 -->
+      <div class="fade-in" style="margin-top:48px; max-width:600px; margin-left:auto; margin-right:auto;">
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:1.05rem; font-weight:700; color:var(--primary); text-align:center; margin-bottom:20px;">よくあるご相談</h3>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:12px;">
+          <li style="background:var(--white); border-radius:10px; padding:14px 18px; font-size:0.88rem; color:var(--text); line-height:1.6; border-left:3px solid var(--accent);">病院では異常なしと言われたけれど、つらさが続いている</li>
+          <li style="background:var(--white); border-radius:10px; padding:14px 18px; font-size:0.88rem; color:var(--text); line-height:1.6; border-left:3px solid var(--accent);">診断名はあるけれど、薬や湿布だけでは不安が残る</li>
+          <li style="background:var(--white); border-radius:10px; padding:14px 18px; font-size:0.88rem; color:var(--text); line-height:1.6; border-left:3px solid var(--accent);">マッサージを受けても、すぐに戻ってしまう</li>
+          <li style="background:var(--white); border-radius:10px; padding:14px 18px; font-size:0.88rem; color:var(--text); line-height:1.6; border-left:3px solid var(--accent);">年齢のせいと言われたけれど、あきらめきれない</li>
+          <li style="background:var(--white); border-radius:10px; padding:14px 18px; font-size:0.88rem; color:var(--text); line-height:1.6; border-left:3px solid var(--accent);">どこに相談したらいいかわからない</li>
+        </ul>
+        <p style="text-align:center; margin-top:16px; font-size:0.85rem; color:var(--muted);">ひとつでも当てはまる方は、お気軽にご相談ください。</p>
       </div>
     </div>
   </section>
@@ -1923,6 +1966,7 @@
           <div class="price-main">12,000<small>円</small></div>
           <div class="price-sub">約90分（問診・施術・アドバイス含む）</div>
         </div>
+        <p class="fade-in" style="font-size:0.85rem; color:var(--muted); line-height:1.8; margin-top:14px; padding:0 4px;">初診では、問診・検査・施術・今後の方針説明・セルフケア提案まで行います。<br>ただ施術を受ける時間ではなく、今の体を一緒に整理するための時間です。</p>
       </div>
 
       <!-- 2回目以降 -->

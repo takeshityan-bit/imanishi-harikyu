@@ -494,7 +494,7 @@ SEO改善:
 
 ### Phase 6: E-E-A-T強化・著者情報追加（2026年5月7日、Codex実施）
 
-対象: zakotsu.html, kounenki.html, memai.html, seiritsu.html（Codex作成の4LP）
+対象: 全14症状LP（zakotsu, kounenki, memai, seiritsu + youtsu, zutsuu, hizatsu, gojukata, sports, jiritsushinkei, fumin, ketsuatsu, sango, biyoshin）
 
 著者セクション追加（FAQの直前に配置）:
 - 「この記事を書いた人」セクション（author-box）

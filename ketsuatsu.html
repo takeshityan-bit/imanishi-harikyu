@@ -50,7 +50,32 @@
     "description": "降圧薬と併用する補助的なケアとして、自律神経・血流・睡眠・ストレス・体の緊張を整えます。八尾市の鍼灸院。",
     "url": "https://takeshityan-bit.github.io/imanishi-harikyu/ketsuatsu.html",
     "about": {"@type": "MedicalCondition", "name": "高血圧", "alternateName": "Hypertension"},
-    "isPartOf": {"@id": "https://takeshityan-bit.github.io/imanishi-harikyu/#clinic"}
+    "isPartOf": {"@id": "https://takeshityan-bit.github.io/imanishi-harikyu/#clinic"},
+    "dateModified": "2026-05-07",
+    "author": {
+      "@type": "Person",
+      "name": "今西 健",
+      "jobTitle": "鍼灸師・柔道整復師",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "今西健はり・灸院",
+        "url": "https://takeshityan-bit.github.io/imanishi-harikyu/"
+      },
+      "knowsAbout": ["鍼灸", "東洋医学", "身体の構造", "運動指導", "分子栄養学"]
+    },
+    "publisher": {
+      "@type": "MedicalBusiness",
+      "name": "今西健はり・灸院",
+      "url": "https://takeshityan-bit.github.io/imanishi-harikyu/",
+      "telephone": "+81-72-998-7474",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "堤町2-30-59",
+        "addressLocality": "八尾市",
+        "addressRegion": "大阪府",
+        "addressCountry": "JP"
+      }
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -857,6 +882,23 @@
       .selfcare-wrap { padding: 28px 24px; }
       .first-visit { padding: 28px 24px; }
     }
+  
+    /* Author Box */
+    .author-section { background: var(--bg, #F5F1EC); padding: 64px 24px; }
+    .author-box { background: var(--white, #fff); border-radius: 16px; padding: 32px 28px; box-shadow: 0 2px 12px rgba(28,48,40,0.06); max-width: 800px; margin: 0 auto; }
+    .author-grid { display: flex; gap: 20px; align-items: flex-start; }
+    .author-mark { width: 56px; height: 56px; border-radius: 50%; background: var(--primary, #1C3028); color: var(--white, #fff); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700; font-family: 'Noto Serif JP', serif; flex-shrink: 0; }
+    .author-name { font-size: 1.1rem; font-weight: 700; color: var(--primary, #1C3028); margin-bottom: 2px; }
+    .author-role { font-size: 0.82rem; color: var(--muted, #6B7280); margin-bottom: 12px; }
+    .author-desc { font-size: 0.88rem; line-height: 1.8; color: var(--text, #1A1A1A); margin-bottom: 14px; }
+    .author-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .author-tags span { font-size: 0.75rem; background: rgba(122,171,138,0.12); color: var(--secondary, #2D5040); padding: 4px 10px; border-radius: 20px; }
+    .author-link { font-size: 0.85rem; color: var(--primary, #1C3028); text-decoration: underline; font-weight: 600; }
+    .author-link:hover { color: var(--secondary, #2D5040); }
+    @media (max-width: 600px) {
+      .author-grid { flex-direction: column; align-items: center; text-align: center; }
+      .author-tags { justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -1153,6 +1195,35 @@
     </div>
   </div>
 </section>
+
+
+  <!-- Author Section -->
+  <section class="author-section">
+    <div class="container">
+      <p class="section-label">Author</p>
+      <h2 class="section-title">この記事を書いた人</h2>
+      <div class="author-box fade-in">
+        <div class="author-grid">
+          <div class="author-mark" aria-hidden="true">今</div>
+          <div>
+            <p class="author-name">今西 健</p>
+            <p class="author-role">今西健はり・灸院 院長／鍼灸師・柔道整復師</p>
+            <p class="author-desc">
+              このページは、院長の今西健が、鍼灸師・柔道整復師としての臨床経験と、東洋医学、身体の構造、運動指導、分子栄養学の視点をもとに作成しています。症状名だけで判断せず、全身の状態と生活背景を丁寧に整理することを大切にしています。
+            </p>
+            <div class="author-tags" aria-label="専門分野">
+              <span>鍼灸</span>
+              <span>柔道整復</span>
+              <span>東洋医学</span>
+              <span>運動指導</span>
+              <span>分子栄養学</span>
+            </div>
+            <a href="first-visit.html" class="author-link">院長の考え方を見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- ===== FAQ ===== -->
 <section class="section" style="background: var(--white); padding-top: 60px; padding-bottom: 60px;">

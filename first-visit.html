@@ -14,11 +14,11 @@
   <script src="tracking.js" defer></script>
   <title>はじめての方へ｜今西健はり・灸院｜大阪府八尾市</title>
   <meta name="google-site-verification" content="mKSUuKc_ZhmRhceymC6e1TPnpfpCsWZmOBBdV5jCCNk" />
-  <meta name="description" content="今西健はり・灸院の思い。痛いところだけを見るのではなく、その方がどのような毎日を送り、どのような思いで来てくださったのかまで大切にしています。八尾市堤町の鍼灸院。">
+  <meta name="description" content="八尾市堤町の今西健はり・灸院へはじめて来られる方へ。初診90分の流れ、服装、鍼が怖い方への対応、病院との併用、LINE予約の例文などをまとめています。">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://takeshityan-bit.github.io/imanishi-harikyu/first-visit.html">
   <meta property="og:title" content="はじめての方へ｜今西健はり・灸院｜大阪府八尾市">
-  <meta property="og:description" content="痛いところだけでなく、その方の毎日まで大切にする。大阪府八尾市の鍼灸院。">
+  <meta property="og:description" content="初診90分の流れ、服装、鍼が怖い方への対応、病院との併用、LINE予約の例文などをまとめています。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://takeshityan-bit.github.io/imanishi-harikyu/first-visit.html">
   <meta property="og:site_name" content="今西健はり・灸院">
@@ -28,7 +28,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="はじめての方へ｜今西健はり・灸院｜大阪府八尾市">
-  <meta name="twitter:description" content="痛いところだけでなく、その方の毎日まで大切にする。大阪府八尾市の鍼灸院。">
+  <meta name="twitter:description" content="初診90分の流れ、服装、鍼が怖い方への対応、病院との併用、LINE予約の例文などをまとめています。">
   <meta name="twitter:image" content="https://takeshityan-bit.github.io/imanishi-harikyu/images/portrait.jpg">
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -36,7 +36,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "はじめての方へ",
-    "description": "今西健はり・灸院の思い。痛いところだけを見るのではなく、その方がどのような毎日を送り、どのような思いで来てくださったのかまで大切にしています。",
+    "description": "八尾市堤町の今西健はり・灸院へはじめて来られる方へ。初診90分の流れ、服装、鍼が怖い方への対応、病院との併用、LINE予約の例文などをまとめています。",
     "url": "https://takeshityan-bit.github.io/imanishi-harikyu/first-visit.html",
     "isPartOf": {
       "@type": "LocalBusiness",
@@ -74,6 +74,7 @@
     body {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
       color: var(--text);
+      background: var(--white);
       line-height: 2;
       font-size: 16px;
     }
@@ -236,6 +237,132 @@
       border-radius: 50%;
     }
 
+    .visit-flow {
+      list-style: none;
+      margin: 24px 0 30px;
+      padding: 0;
+      counter-reset: visit-step;
+    }
+
+    .visit-flow li {
+      counter-increment: visit-step;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid #ddeee4;
+    }
+
+    .visit-flow li::before {
+      content: counter(visit-step);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--main);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+    .flow-title {
+      display: block;
+      color: var(--main);
+      font-weight: 700;
+      margin-bottom: 2px;
+      line-height: 1.7;
+    }
+
+    .flow-desc {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 24px 0 30px;
+    }
+
+    .info-card {
+      background: var(--light);
+      border-radius: 12px;
+      padding: 20px 18px;
+    }
+
+    .info-card h3 {
+      color: var(--main);
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .line-example {
+      background: #f7faf8;
+      border: 1px solid #d9eadf;
+      border-radius: 12px;
+      padding: 22px 22px 20px;
+      margin: 24px 0 30px;
+    }
+
+    .line-example-title {
+      color: var(--main);
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .line-message {
+      background: var(--white);
+      border-left: 4px solid #06C755;
+      border-radius: 8px;
+      padding: 16px 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.9;
+      margin-bottom: 14px;
+    }
+
+    .line-note {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.8;
+    }
+
+    .qa-list {
+      margin: 24px 0 30px;
+    }
+
+    .qa-item {
+      border-bottom: 1px solid #ddeee4;
+      padding: 18px 0;
+    }
+
+    .qa-item h3 {
+      color: var(--main);
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    .qa-item p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.85;
+    }
+
     /* 締めのメッセージ */
     .closing-message {
       background: var(--main);
@@ -310,6 +437,8 @@
     @media (max-width: 720px) {
       .content { padding: 40px 18px 32px; }
       .voices { padding: 22px 20px 16px; }
+      .visit-flow li { grid-template-columns: 38px 1fr; gap: 12px; }
+      .info-grid { grid-template-columns: 1fr; }
       .closing-message { padding: 28px 20px; }
       .cta-btn { display: block; margin: 10px auto; max-width: 280px; }
     }
@@ -409,6 +538,99 @@
 
   <p class="body-text">「こんなことを話してもいいのかな」と思うようなことでも、どうぞ遠慮なくお話しください。</p>
 
+  <h2 class="section-heading">初診90分で行うこと</h2>
+
+  <p class="body-text">初診では、問診から施術後の説明までを含めて約90分のお時間をいただいています。お身体の状態によって内容は変わりますが、基本的には次の流れで進めます。</p>
+
+  <ol class="visit-flow">
+    <li>
+      <span>
+        <span class="flow-title">問診</span>
+        <span class="flow-desc">いつから、どのようにつらいのか。病院での検査結果、生活リズム、睡眠、仕事や家事での負担などを丁寧に伺います。</span>
+      </span>
+    </li>
+    <li>
+      <span>
+        <span class="flow-title">検査・確認</span>
+        <span class="flow-desc">姿勢、関節の動き、筋肉の緊張、呼吸の深さ、脈やお腹の状態などを確認し、どこに負担がかかっているかを一緒に整理します。</span>
+      </span>
+    </li>
+    <li>
+      <span>
+        <span class="flow-title">施術</span>
+        <span class="flow-desc">鍼灸を中心に、必要に応じて整体・カイロプラクティック・運動療法の視点も組み合わせます。刺激量はその方の状態に合わせます。</span>
+      </span>
+    </li>
+    <li>
+      <span>
+        <span class="flow-title">方針説明</span>
+        <span class="flow-desc">今日見えてきたお身体の状態、考えられる負担、今後の通院目安をできるだけわかりやすくお伝えします。</span>
+      </span>
+    </li>
+    <li>
+      <span>
+        <span class="flow-title">セルフケア提案</span>
+        <span class="flow-desc">ご自宅で無理なくできる動き、呼吸、姿勢、生活の見直しなどを必要に応じてお伝えします。</span>
+      </span>
+    </li>
+  </ol>
+
+  <h2 class="section-heading">来院前によくあるご不安について</h2>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>服装について</h3>
+      <p>お着替えの用意はありません。肘と膝が出せる服装、または動きやすい服装でお越しください。難しい場合は、できる範囲で構いません。</p>
+    </div>
+    <div class="info-card">
+      <h3>鍼が怖い方へ</h3>
+      <p>鍼は髪の毛ほどの細いものを使います。怖さが強い方には、刺さない鍼である「てい鍼」を使うこともできますので、遠慮なくお伝えください。</p>
+    </div>
+    <div class="info-card">
+      <h3>病院との併用について</h3>
+      <p>医師の治療やお薬と並行して通っていただいて構いません。症状によっては、先に医療機関の受診をおすすめすることもあります。</p>
+    </div>
+    <div class="info-card">
+      <h3>回数券や勧誘について</h3>
+      <p>無理な回数券の販売や勧誘はありません。通院の目安はお伝えしますが、最終的にはご本人の状態やご都合を大切にしながら一緒に考えます。</p>
+    </div>
+  </div>
+
+  <h2 class="section-heading">LINE予約の例文</h2>
+
+  <p class="body-text">LINEでは、最初から詳しく説明しようとしなくても大丈夫です。次のように短く送っていただければ、こちらから確認させていただきます。</p>
+
+  <div class="line-example">
+    <p class="line-example-title">そのまま使える例文</p>
+    <p class="line-message">はじめてです。肩こりと頭痛で相談したいです。<br>空いている日時を教えてください。</p>
+    <p class="line-note">症状名だけでも構いません。いつからつらいか、病院で検査を受けたか、希望の曜日や時間帯があれば、あわせて送っていただくとご案内がスムーズです。</p>
+  </div>
+
+  <h2 class="section-heading">初診でよく聞かれること</h2>
+
+  <div class="qa-list">
+    <div class="qa-item">
+      <h3>Q. 鍼は痛いですか？</h3>
+      <p>A. 感じ方には個人差がありますが、髪の毛ほどの細い鍼を使い、刺激量は調整します。怖さがある方には、刺さない鍼から始めることもできます。</p>
+    </div>
+    <div class="qa-item">
+      <h3>Q. 病院で異常なしと言われても相談できますか？</h3>
+      <p>A. ご相談いただけます。画像や検査で大きな異常が見つからなくても、筋肉、関節、姿勢、呼吸、自律神経、生活習慣などに負担が隠れていることがあります。</p>
+    </div>
+    <div class="qa-item">
+      <h3>Q. どれくらい通えばいいですか？</h3>
+      <p>A. 症状の強さ、続いている期間、生活環境によって変わります。初診でお身体を確認したうえで、無理のない通院目安をお伝えします。</p>
+    </div>
+    <div class="qa-item">
+      <h3>Q. 何を持って行けばいいですか？</h3>
+      <p>A. 検査結果、お薬手帳、血圧の記録などがあればお持ちください。特にない場合は、そのままお越しいただいて大丈夫です。</p>
+    </div>
+    <div class="qa-item">
+      <h3>Q. 家族の相談でも大丈夫ですか？</h3>
+      <p>A. はい、大丈夫です。ご本人の状態を直接確認することが基本ですが、まずはLINEやお電話で状況をお聞かせください。</p>
+    </div>
+  </div>
+
   <div class="separator"></div>
 
   <!-- こんな方へ -->
@@ -451,7 +673,7 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.15 });
-document.querySelectorAll('.voices, .quote-box, .section-heading, .small-changes, .closing-message').forEach(el => {
+document.querySelectorAll('.voices, .quote-box, .section-heading, .small-changes, .visit-flow, .info-grid, .line-example, .qa-list, .closing-message').forEach(el => {
   el.classList.add('fade-up');
   observer.observe(el);
 });

@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://takeshityan-bit.github.io/imanishi-harikyu/column.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -135,6 +135,12 @@
   <url>
     <loc>https://takeshityan-bit.github.io/imanishi-harikyu/column/tsukareyasui-40dai.html</loc>
     <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://takeshityan-bit.github.io/imanishi-harikyu/column/katakori-massage-modoru.html</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -16,5 +16,11 @@ document.addEventListener('click', function(e) {
       event_label: 'LINE',
       page_path: location.pathname
     });
+  } else if (href.includes('youtube.com') || href.includes('youtu.be')) {
+    gtag('event', 'click_youtube', {
+      event_category: 'external',
+      event_label: href,
+      page_path: location.pathname
+    });
   }
 });

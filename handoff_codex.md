@@ -529,27 +529,64 @@ CSS追加:
 > 上のプロジェクト全体仕様とは別物。バトンを渡す側が毎回ここを最新化する。  
 > 履歴は残さず上書きでOK（仕様変更は上のセクションに反映）。
 
-最終更新: YYYY-MM-DD（記入者: Claude Code / Codex）
+最終更新: 2026-05-12（記入者: Codex）
 
 ### 目的
-- 例: 症状LPのSEO仕上げ
+- 音楽ページ追加後の仕上げ確認、SEO軽微修正、Cloudflare公開対象の安全化
 
 ### 完了
-- 例: index.html の症状カード追加済み
+- kounenki.html の title / og:title / twitter:title を「八尾市で更年期の不調にお悩みの方へ」型へ調整
+- index.html の既存相談セクション見出しを「八尾市で多いご相談」に変更（重複セクションは追加せず）
+- music.html の医療広告的に強く見える表現を緩和（「自律神経を整える」「施術の効果を長持ち」系を避けた）
+- column/*.html に残っていた GitHub Pages URL を Cloudflare Workers URL に統一
+- コラム5記事は Article JSON-LD ありと確認済み（新規追加不要）
+- スマホ幅で /, /music.html, /kounenki.html, /column/katakori-massage-modoru.html, /column/hajimete-shinkyuu.html を確認。console error なし
+- .assetsignore を追加し、handoff_codex.md / wrangler.jsonc / .git / .claude / .wrangler などをCloudflare公開対象から除外
+- Cloudflare Workersへ再デプロイ済み
+  - URL: `https://orange-moon-091d.takeshityan.workers.dev`
+  - Version ID: `a9d7d8e1-fca0-4368-b435-05674cc7313b`
+- 公開URL確認済み
+  - `/` は 200
+  - `/handoff_codex.md`, `/wrangler.jsonc`, `/.git`, `/.gitignore`, `/.assetsignore` は 404
+
+### コミット
+- `12e6978` 音楽ページ(music.html)を新規作成 - AcuRestHealingMusic YouTube連携
+- `ff67bb1` トップページのナビ・モバイルメニュー・フッターに音楽ページへのリンク追加、wrangler.jsonc追加
+- `2b7e079` 自律神経・不眠・頭痛ページにヒーリングBGM誘導リンクを追加
+- `94452d8` 本番URLをCloudflare Workersに統一、GA4にYouTubeクリック計測を追加
+- `f040157` SEO微調整とCloudflare URL統一の補完
+- `519571b` Cloudflare公開対象から内部ファイルを除外
 
 ### 途中
-- 例: youtsu.html のFAQを追加中（Q3まで）
+- GitHub push は未完了。`git push origin HEAD:main` は認証エラーで失敗
+  - エラー: `Invalid username or token. Password authentication is not supported for Git operations.`
+  - SSH経由も `Permission denied (publickey)` で失敗
+  - PATはチャットに貼らないこと
 
 ### 次にやること
-1. 全症状LPの構造化データ確認
-2. sitemap.xml に抜けがないか確認
-3. 表示崩れチェック（スマホ幅優先）
+1. GitHubへのpush（現在 main に対して6コミット先行）
+2. GA4プロパティのURLをCloudflare Workers URLに変更（GA4管理画面で手動）
+3. Google Search Console にCloudflare Workers URLを登録（手動）
+4. GitHub Pages の無効化 or リダイレクト設定（任意）
+5. GitHubリポジトリをPrivateに変更（CLAUDE.mdルール）
+6. 患者さんの声ページは素材が集まってから検討
 
 ### 触ったファイル
+- .assetsignore（新規）
 - index.html
-- youtsu.html
+- kounenki.html
+- music.html
+- column/hajimete-shinkyuu.html
+- column/haru-darusa.html
+- column/jiritsushinkei-suimin.html
+- column/katakori-massage-modoru.html
+- column/tsukareyasui-40dai.html
+- handoff_codex.md（このメモ更新のみ。Cloudflare公開対象から除外済み）
 
 ### 注意
+- 本番URLは `https://orange-moon-091d.takeshityan.workers.dev` に統一。note等へ載せるURLもこれ
+- デプロイは `/opt/homebrew/bin/wrangler deploy` で実行可能
+- `handoff_codex.md` は内部メモ。公開アセットには含めない
+- `.wrangler/` は未追跡の生成物。コミット不要
 - 同じファイルを Claude Code / Codex で同時に触らない
-- 大きめ変更を入れたら相手にdiffを見せてから続行
 - 医療広告表現は断定禁止（仕様詳細は上の「医療広告表現の注意」参照）
